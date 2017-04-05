@@ -6,11 +6,14 @@ exports.parseFile = function (param) {
     var results = []
 
     if (param == "LodgingBusiness") {
-        var files = ["./data/LodgingBusiness/00bcee82-4c69-431a-8a80-6d9e9af44eb8-en.json", "./data/LodgingBusiness/0a094ae7-145e-469f-a864-ea54616c2a55-en.json", "./data/LodgingBusiness/0a92211d-d0db-4875-a26e-a5cdd0c6b434-en.json"]
+        var files = ["./data/LodgingBusiness/00bcee82-4c69-431a-8a80-6d9e9af44eb8-en.json", "./data/LodgingBusiness/0a094ae7-145e-469f-a864-ea54616c2a55-en.json", "./data/LodgingBusiness/0a92211d-d0db-4875-a26e-a5cdd0c6b434-en.json",
+        "./data/LodgingBusiness/0a2afaa0-7906-4732-866e-689feed903a6-en.json"]
     } else if (param == "Event") {
-        var files = ["./data/Event/0a907e50-f6f8-44ca-a6e1-f653d371d7a1-en.json", "./data/Event/0d5d5a43-6243-4a89-8fa1-d766d87cb263-en.json", "./data/Event/94aab131-a30a-49c2-9580-4f4f142f26ac-en.json"]
+        var files = ["./data/Event/0a907e50-f6f8-44ca-a6e1-f653d371d7a1-en.json", "./data/Event/0d5d5a43-6243-4a89-8fa1-d766d87cb263-en.json", "./data/Event/94aab131-a30a-49c2-9580-4f4f142f26ac-en.json",
+        "./data/Event/0d6ed06e-2245-466d-aadd-61fa292e10fb-en.json"]
     } else if (param == "Infrastructure") {
-        var files = ["./data/infrastructure/0b6d7063-fe7a-412c-9f00-6816876ad6e9-en.json", "./data/infrastructure/1b3b6167-5533-44d7-b7b9-0505967c6e95-en.json", "./data/infrastructure/f32e37f8-be1e-4164-8d60-bef4a110a99e-en.json"]
+        var files = ["./data/infrastructure/0b6d7063-fe7a-412c-9f00-6816876ad6e9-en.json", "./data/infrastructure/1b3b6167-5533-44d7-b7b9-0505967c6e95-en.json", "./data/infrastructure/f32e37f8-be1e-4164-8d60-bef4a110a99e-en.json",
+        "./data/infrastructure/0ad00b2f-dee4-41b2-8187-cd84b77f5196-en.json", "./data/infrastructure/0b3c3418-8634-49e5-974b-646ca2c393f2-en.json"]
     }
 
     for (var i = 0; i < files.length; i++) {
