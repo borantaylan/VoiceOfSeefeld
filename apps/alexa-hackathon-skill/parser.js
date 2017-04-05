@@ -6,18 +6,14 @@ exports.parseFile = function (param) {
     var results = []
 
     if (param == "LodgingBusiness") {
-        startParsing("./data/LodgingBusiness/00bcee82-4c69-431a-8a80-6d9e9af44eb8-en.json")
+        var files = ["./data/LodgingBusiness/00bcee82-4c69-431a-8a80-6d9e9af44eb8-en.json"]
     }
 
-    /*fs.readdir(filedir, (err, files) => {
-        files.forEach(file => {
-        if (file.indexOf(".json") >= 0) {
-            results.push(startParsing(filedir+file));
-        }
+    for (var i = 0; i < files.length; i++) {
+        results.push(startParsing(files[i]))
+    }
 
-        });
-         return callback(results);
-    });*/
+    return results
 }
 
 function startParsing(filename) {
