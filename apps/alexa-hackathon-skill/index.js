@@ -4,14 +4,26 @@ module.change_code = 1;
 var alexa = require('alexa-app');
 var app = new alexa.app('hackathon-skill');
 var cheerio = require('cheerio');
-
+var filesystemIO = require('fs');
 
 var moment = require('moment');
+var parser = require("./parser.js");
+
 
 
 app.launch(function(request, response) {
-    var hotels = ["Sporthotel Xander","Pension Krosbacher","Haus Tiefenbrunner"];
-    request.getSession().set("listOfHotels", hotels);
+  var logBusDir = "./data/";
+  filesystemIO.readdir(logBusDir, (fileerror, filenames) => {
+      filenames.forEach(filename => {
+        console.log(logBusDir+filename);
+
+        //var tempJSON = parser.parseFile(logBusDir+file);
+        //listOfHotelJSONs.push(tempJSON);
+      });
+  });
+  var listOfHotelJSONs = [];
+
+    request.getSession().set("listOfHotels", listOfHotelJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
 });
@@ -35,16 +47,22 @@ app.intent('Locality', {
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
-    var session = request.getSession();
-    var listOfHotels = session.get("listOfHotels");
+    var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    var listOfHotels = [];
+    listOfHotelJSONs.forEach(hotel => {
+        listOfHotels.push(hotel['name']);
+    });
+
+
+
 
     //TODO use param to retrieve hotel lists
-    var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: " ;
+    var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: ";
 
-    for(var i=0;i<listOfHotels.length;i++){
-      result = result + "<p>Number " + (i+1) + ": " + listOfHotels[i] + "</p>, ";
+    for (var i = 0; i < listOfHotels.length; i++) {
+        result = result + "<p>Number " + (i + 1) + ": " + listOfHotels[i] + "</p>, ";
     }
-    response.say(result.substring(0,result.length-2));
+    response.say(result.substring(0, result.length - 2));
 });
 app.intent('Information', {
     "slots": {
@@ -78,7 +96,7 @@ app.intent('Availability', {
 }, function(request, response) {
     var param = request.slot("Name");
     var listOfRooms = ["Room 1", "Room 2", "Room 3"];
-    response.say("There are "+listOfRooms.length+" rooms available.");
+    response.say("There are " + listOfRooms.length + " rooms available.");
 });
 
 app.intent('HotelAddress', {
@@ -99,7 +117,7 @@ app.intent('HotelAddress', {
 }, function(request, response) {
     var param = request.slot("Name");
     var address = "Seefeld Street 1";
-    response.say(param+" is located in "+address);
+    response.say(param + " is located in " + address);
 });
 
 app.intent('Booking', {
