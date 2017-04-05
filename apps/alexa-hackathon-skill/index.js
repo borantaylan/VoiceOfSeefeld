@@ -22,17 +22,25 @@ app.error = function(exception, request, response) {
     response.say('Sorry an error occured ' + error.message);
 };
 
-app.intent('Salut', {
+app.intent('Locality', {
     "slots": {
-        "LastWord": "AMAZON.LITERAL"
+        "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "How you doing {idiot|LastWord}",
-        "How you doing {stupid|LastWord}",
+        "Where can I stay in {Seefeld|AddressLocality}",
+        "Where can I stay in {Mosern|AddressLocality}",
+        "Where can I stay in {Leutasch|AddressLocality}"
     ]
 }, function(request, response) {
-    var param = request.slot("LastWord");
-    response.say("How dare you call me " + param);
+    var param = request.slot("AddressLocality");
+    //TODO use param to retrieve hotel lists
+    var listOfHotels = ["Sporthotel Xander","Pension Krosbacher","Haus Tiefenbrunner"] ;
+    var result = "There are " + listOfHotels.length + " hotels in " + param + ":"  ;
+    for(var i=0;i<listOfHotels.length;i++){
+      result = result + listOfHotels[i] + ",";
+    }
+
+    response.say(result.substring(0,result.length-1));
 });
 
 module.exports = app;
