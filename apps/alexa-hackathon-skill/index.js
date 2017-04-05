@@ -14,12 +14,12 @@ var parser = require("./parser.js");
 app.launch(function(request, response) {
   var logBusDir = "./data/";
   filesystemIO.readdir(logBusDir, (fileerror, filenames) => {
-      filenames.forEach(filename => {
+      /*filenames.forEach(filename => {
         console.log(logBusDir+filename);
 
         //var tempJSON = parser.parseFile(logBusDir+file);
         //listOfHotelJSONs.push(tempJSON);
-      });
+      });*/
   });
   var listOfHotelJSONs = [];
 
