@@ -3,11 +3,11 @@
 exports.parseFile = function (filename) {
     var file = require('./' + filename)
     var type = file["@type"]
-    if (type.indexOf("Event") >= 1) {
+    if (type.indexOf("Event") >= 0) {
         return parseEvent(file)
-    } else if (type.indexOf("BeautySalon") >= 1 || type.indexOf("Store") || type.indexOf("TouristInformationCenter")) {
+    } else if (type.indexOf("BeautySalon") >= 0 || type.indexOf("Store") >= 0 || type.indexOf("TouristInformationCenter") >= 0) {
         return parseInfra(file)
-    } else if (type.indexOf("LodgingBusiness") || type.indexOf("Hotel") || type.indexOf("BadAndBreakfast")) {
+    } else if (type.indexOf("LodgingBusiness") >= 0|| type.indexOf("Hotel") >= 0 || type.indexOf("BadAndBreakfast") >= 0) {
         return parseAcomodation(file);
     }
 }

@@ -9,7 +9,7 @@ etc.
 
 viable fields for an accomandation-object:
 name
-urls
+urls -> []
 desc
 addressName
 street
@@ -17,13 +17,13 @@ locality
 telephone
 fax
 email
-offerNames
-images
-caption
+offerNames -> []
+images -> []
+caption -> []
 
 viable fields for an infrastructure-object:
 name
-urls
+urls -> []
 desc
 addressName
 street
@@ -32,12 +32,12 @@ telephone
 fax
 email
 addressUrl
-images
-caption
+images -> []
+caption -> []
 
 viable fields for an event-object:
 name
-urls
+urls -> [] carefull, its not in every file available
 desc
 startDate
 endDate
@@ -47,5 +47,5 @@ telephone
 fax
 email
 addressUrl
-images
-caption
+images -> []
+caption -> []
