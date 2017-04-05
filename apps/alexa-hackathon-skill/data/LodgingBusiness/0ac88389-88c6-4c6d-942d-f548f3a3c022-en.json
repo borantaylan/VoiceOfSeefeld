@@ -1,0 +1,183 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "LodgingBusiness"
+  ],
+  "url": [
+    "http://www.seefeld-austria.at",
+    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Haus Mirabell",
+    "streetAddress": "Geigenbühelstr. 635",
+    "addressLocality": "Seefeld",
+    "postalCode": "6100",
+    "addressCountry": "AT",
+    "telephone": "(0043) 5212 4300",
+    "faxNumber": "(0043) 5212 4300",
+    "email": "mirabell@seefeld-austria.at",
+    "url": "www.seefeld-austria.at"
+  },
+  "name": "Haus Mirabell",
+  "description": [
+    "Our pension is located in a sunny, quiet and central position, directly at the foot of the Geigenbühel, the village is just 3 minutes off, the south-side sun terrasse invites to a sunbath.",
+    "Our double rooms are equipped with schower/WC, hair dryer, Sat-TV. radio and balcony. inclusive: widened breakfast, cure taxe, as well as an ope garage.",
+    "Our pension is located in a very sunny, quiet and central position, directly at the foot of the Geigenbühel."
+  ],
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/e49f1f9a-c540-424a-a043-5fbcaea66e89/99/image.jpg",
+      "caption": "Sommer"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/8cbc7a2e-2474-47b8-83f1-4b9576048b61/99/image.jpg",
+      "caption": "Logo"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/cae0041c-3529-479f-8766-a6f948c5e8cc/99/image.jpg",
+      "caption": "Winter "
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/9e6a5b8c-c8c4-40af-8726-b83dcef8aeb0/99/image.jpg",
+      "caption": "Terrasse mit Aussicht"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/d5df87ba-1df5-4cd0-8b7a-190933419e84/99/image.jpg",
+      "caption": "Eingang"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/18472afd-1b26-49c1-824a-f6430d0f3d26/99/image.jpg",
+      "caption": "Aufenthaltsraum"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/d28ff48b-c294-4a7f-906e-8708eef8cbdf/99/image.jpg",
+      "caption": "Eingang"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/cc7ff5a4-a61b-47cc-840e-e6c49ce333dd/99/image.jpg",
+      "caption": "Haus Rückseite Geigenbühel "
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/bd6c965f-6b3c-43c9-8a36-f3acf828d67d/99/image.jpg",
+      "caption": "Blick-zum-Haus"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/3ccf6608-280b-4c64-812d-fc5b86b06be4/99/image.jpg",
+      "caption": "Skihang-Haushinterseite"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/246134cf-8cc5-4c6c-9260-ac3dc955e4b1/99/image.jpg",
+      "caption": "Enzianwandern"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/5ec09f29-830c-4d82-a611-ec9e189a9693/99/image.jpg",
+      "caption": "Blick-zum-Haus"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/542e2b41-2911-4b0a-9f00-c900f864297d/99/image.jpg",
+      "caption": "Mirabellhausgarten"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/40b25698-0f4f-495a-80c9-31fb385d1c66/99/image.jpg",
+      "caption": "Balkonblick-Heuernte"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/77b47e3c-eee3-46fc-b73f-59aef2b01cf6/99/image.jpg",
+      "caption": "Mirabellhausgarten2"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/0110d3f9-1da5-44a7-bbf6-1a7bd860a641/99/image.jpg",
+      "caption": "Hausblick"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/6903deb7-9b5b-46cc-b8d3-077d91223af1/99/image.jpg",
+      "caption": "Heuernte-Haushinterseite"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3326787482872",
+    "longitude": "11.1877405643463"
+  },
+  "currenciesAccepted": "EUR",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Apartment with 1 bed room,  shower and a toilet.",
+      "description": "Our appartement (2-4 persons) consist a living-sleeping room, TV-Sat, sleeping room, shower/WC, hair dryer, kithenette, balcony. \nInclusive: open garage, child\u0027s bed, table and bed-linen\nExclusive: cure taxe, final cleaning, breakfast",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "Apartment with 1 bed room,  shower and a toilet.",
+          "numberOfRooms": "2.0",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "52.00",
+          "maxPrice": "83.00",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Apartment with 1 bed room,  shower and a toilet.",
+      "description": "2-Room Apartment 35 m2 -\nconsists of living room with flat screen TV / SAT, radio, separate bedroom, shower / WC, kitchenette with microwave, balcony, wireless.\nCot and high chair free. Table and bed linen (bath / hand / dish towels) available.\nKitchen is fully equipped!\nTourist tax and final cleaning is NOT included in the price and will be charged separately !! \nconsists of living room with flat screen TV / SAT, radio, separate bedroom, shower / WC, kitchenette with microwave, balcony, wi",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "Apartment, shower, toilet, 1 bed room",
+          "numberOfRooms": "2.0", "Apartment with 1 bed room,  shower and a toilet.
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "2"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "50.00",
+          "maxPrice": "72.00",
+          "priceCurrency": "EUR"
+        }
+      ]
+    }
+  ]
+}

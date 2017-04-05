@@ -3,7 +3,7 @@
   "@type": [
     "Event"
   ],
-  "name": "Concert of French choir \"Le Diairi\"",
+  "name": "Concert of French choir Le Diairi",
   "eventStatus": "http://schema.org/EventScheduled",
   "organizer": {
     "@type": "Organization",
@@ -38,7 +38,7 @@
     {
       "@type": "ImageObject",
       "url": "http://resc.deskline.net/images/SEE/1/e0c03b62-6bf1-464a-8ab0-07b2b18eafbb/99/image.jpg",
-      "caption": "\"Le Diairi\""
+      "caption": "Le Diairi"
     }
   ],
   "url": [
