@@ -1,0 +1,25 @@
+{
+  "name": "alexa-getmenu-skill",
+  "version": "1.0.0",
+  "description": "This part of project is submodule of alexa-getmenu-server. The skill function will be written here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borantaylan/alexa-getmenu-skill.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borantaylan/alexa-getmenu-skill/issues"
+  },
+  "homepage": "https://github.com/borantaylan/alexa-getmenu-skill#readme",
+  "dependencies": {
+    "alexa-app": "^4.0.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
+  },
+  "devDependencies": {}
+}
