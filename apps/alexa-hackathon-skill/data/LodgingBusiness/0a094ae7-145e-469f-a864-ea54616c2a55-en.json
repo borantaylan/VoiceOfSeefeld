@@ -172,7 +172,7 @@
   "makesOffer": [
     {
       "@type": "Offer",
-      "name": "Double room, bath, toilet",
+      "name": "Double room with bath and toilet.",
       "description": "30m², for max. 3 Pers., one - room apartment east balcony, Ahrnspitze;",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
@@ -181,7 +181,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "double room with bath tub, WC",
+          "name": "Double room with bath and WC",
           "description": "1-room apartment for max. 3 persons, about 30 m² to the east with a sunny balcony and beautiful view to the Ahrnspitze.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette",
           "bed": {
             "@type": "BedDetails",
@@ -628,7 +628,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Double room, bath, toilet",
+      "name": "Double room with bath and toilet.",
       "description": [
         "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal. Facilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette "
       ],
@@ -714,7 +714,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Double room, bath, toilet",
+      "name": "Double room with bath and toilet.",
       "description": "40 m², for max. 3 pers., with living area without balcony.",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
@@ -858,7 +858,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Family room, bath, toilet",
+      "name": "Family room with bath and toilet.",
       "description": "50m² for max. 4 people, two-room-apartment.",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
@@ -942,7 +942,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Family room, shower and bath tub",
+      "name": "Family room with shower and a bath tub.",
       "description": "3-room apartment for max. 6 people ca 70m² with balcony. With 2 separate bedrooms and 1 living room, with bath / WC, shower / WC, telephone, high-speed Internet connection, radio, satellite TV, safe and small kitchenette",
       "availability": "http://schema.org/InStock",
       "itemOffered": [

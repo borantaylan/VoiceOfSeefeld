@@ -56,7 +56,7 @@
   "makesOffer": [
     {
       "@type": "Offer",
-      "name": "Apartment, shower, toilet, 1 bed room",
+      "name": "Apartment with shower, toilet and 1 bed room.",
       "description": "A 2 room apartment (deer) in the 55m² for the second floor, 2-5 persons. Equipped comfortably equipped with shower / WC, 1 bedroom, living room with kitchen (microwave, dishes, etc.) and sleeping facilities, a cloakroom. Also satellite TV, radio, bath-hand dish towels and bedclothes are available. South-facing balcony with stunning panoramic views.",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
