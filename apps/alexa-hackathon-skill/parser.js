@@ -1,8 +1,26 @@
 //jsonFile = require('./00bcee82-4c69-431a-8a80-6d9e9af44eb8-en');
 
-exports.parseFile = function (filename) {
-    var file = require('./' + filename)
+var fs = require('fs');
+
+exports.parseFile = function (filedir,callback) {
+
+    var results = []
+
+    fs.readdir(filedir, (err, files) => {
+        files.forEach(file => {
+        if (file.indexOf(".json") >= 0) {
+            results.push(startParsing(filedir+file));
+        }
+
+        });
+         return callback(results);
+    });
+}
+
+function startParsing(filename) {
+    var file = require(filename)
     var type = file["@type"]
+    console.log(type)
     if (type.indexOf("Event") >= 0) {
         return parseEvent(file)
     } else if (type.indexOf("BeautySalon") >= 0 || type.indexOf("Store") >= 0 || type.indexOf("TouristInformationCenter") >= 0) {
@@ -10,6 +28,7 @@ exports.parseFile = function (filename) {
     } else if (type.indexOf("LodgingBusiness") >= 0|| type.indexOf("Hotel") >= 0 || type.indexOf("BadAndBreakfast") >= 0) {
         return parseAcomodation(file);
     }
+
 }
 
 function parseAcomodation(file) {

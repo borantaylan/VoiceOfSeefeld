@@ -1,6 +1,9 @@
-var parser = require("./parser.js")
+var parser = require('./parser')
 
-var data = parser.parseFile("filepath for example: data/00bcee82-4c69-431a-8a80-6d9e9af44eb8-en")
+var data;
+parser.parseFile('./data/LodgingBusiness/', function(result) {
+    data = result.length;
+})
 
 var name = data['name']
 var desc = data['desc']
