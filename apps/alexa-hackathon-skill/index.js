@@ -24,15 +24,15 @@ app.error = function(exception, request, response) {
 
 app.intent('Salut', {
     "slots": {
-        "lol": "STRING"
+        "LastWord": "AMAZON.LITERAL"
     },
     "utterances": [
-        "How you doing {lol}?",
+        "How you doing {idiot|LastWord}",
+        "How you doing {stupid|LastWord}",
     ]
 }, function(request, response) {
-    var param = request.slot("lol");
-    response.say(param);
-
+    var param = request.slot("LastWord");
+    response.say("How dare you call me " + param);
 });
 
 module.exports = app;
