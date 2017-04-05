@@ -23,8 +23,8 @@
   "name": "Sporthotel Xander",
   "description": [
     "In the heart of Leutasch the family run **** Hotel Xander, the oldest inn in the valley, is tucked away next to the onion-domed village-church. 150 beds in 12 double-rooms and 55 apartments with lounge area, bath/shower/WC. Telephone, safe, radio, SAT-TV and kitchenette.",
-    "dog per day 11,00 €\ngarage 10,00 € per day\nsauna, swiming pool is free\njacuzzi + solarium 7,00 €\nlaundry service 8,00 €\nlocal tax excl.",
-    "locationplan: the Hotel is in front of the church at the district Kirchplatzl.\nCheck in 14.00  Check out 10.00"
+    "dog per day 11,00 €, garage 10,00 € per day, sauna, swiming pool is free, jacuzzi + solarium 7,00 €, laundry service 8,00 €, local tax excl.",
+    "locationplan: the Hotel is in front of the church at the district Kirchplatzl. Check in 14.00  Check out 10.00"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -173,7 +173,7 @@
     {
       "@type": "Offer",
       "name": "Double room, bath, toilet",
-      "description": "30m², for max. 3 Pers., one - room apartment east balcony, Ahrnspitze;\n\n",
+      "description": "30m², for max. 3 Pers., one - room apartment east balcony, Ahrnspitze;",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
         {
@@ -630,8 +630,7 @@
       "@type": "Offer",
       "name": "Double room, bath, toilet",
       "description": [
-        "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette ",
-        "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette"
+        "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal. Facilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette "
       ],
       "availability": "http://schema.org/InStock",
       "itemOffered": [
@@ -716,7 +715,7 @@
     {
       "@type": "Offer",
       "name": "Double room, bath, toilet",
-      "description": "40 m², for max. 3 pers., with living area without balcony.\n\n",
+      "description": "40 m², for max. 3 pers., with living area without balcony.",
       "availability": "http://schema.org/InStock",
       "itemOffered": [
         {
