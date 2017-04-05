@@ -1,9 +1,10 @@
 var parser = require('./parser')
 
-var data;
-parser.parseFile('./data/LodgingBusiness/', function(result) {
-    data = result.length;
-})
+
+var data = parser.parseFile("LodgingBusiness");
+data = parser.parseFile("Event");
+data = parser.parseFile("Infrastructure");
+
 
 var name = data['name']
 var desc = data['desc']
