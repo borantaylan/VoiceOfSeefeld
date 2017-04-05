@@ -1,0 +1,34 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "FastFoodRestaurant"
+  ],
+  "name": "BP Troppacher Tankstelle, Imbiss",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3279557851295",
+    "longitude": "11.1986035108566"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "name": "BP Troppacher",
+    "streetAddress": "Föhrenwald 498",
+    "addressLocality": "Seefeld",
+    "postalCode": "6100",
+    "addressCountry": "AT",
+    "telephone": "(0043) (0)5212/20567",
+    "email": "peter.eigentler@troppacher.at",
+    "url": "http://www.troppacher.at"
+  },
+  "description": "at the Avia petrol station\n\n",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/2b6fd9fd-773a-4417-951d-cfd7ee1e9b6d/99/image.jpg",
+      "caption": "BP"
+    }
+  ],
+  "url": [
+    "http://www.avia.at"
+  ]
+}

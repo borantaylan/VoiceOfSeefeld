@@ -1,0 +1,25 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "LodgingBusiness"
+  ],
+  "url": [
+    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Haus Claudia",
+    "streetAddress": "Claudiastr. 206",
+    "addressLocality": "Seefeld",
+    "postalCode": "6100",
+    "addressCountry": "AT",
+    "email": "office@hausclaudia.tirol"
+  },
+  "name": "Haus Claudia",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3324533354713",
+    "longitude": "11.1936575174332"
+  },
+  "currenciesAccepted": "EUR"
+}
