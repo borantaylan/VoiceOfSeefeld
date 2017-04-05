@@ -6,12 +6,14 @@ var app = new alexa.app('hackathon-skill');
 var cheerio = require('cheerio');
 
 
-var rp = require('request-promise');
 var moment = require('moment');
 
 
 app.launch(function(request, response) {
+    var hotels = ["Sporthotel Xander","Pension Krosbacher","Haus Tiefenbrunner"];
+    request.getSession().set("listOfHotels", hotels);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
+
 });
 
 
@@ -33,15 +35,17 @@ app.intent('Locality', {
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
+    var session = request.getSession();
+    var listOfHotels = session.get("listOfHotels");
 
     //TODO use param to retrieve hotel lists
-    var listOfHotels = ["Sporthotel Xander","Pension Krosbacher","Haus Tiefenbrunner"] ;
-    var result = "There are " + listOfHotels.length + " hotels in " + param + ":"  ;
-    for(var i=0;i<listOfHotels.length;i++){
-      result = result + listOfHotels[i] + ",";
-    }
+    var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: " ;
 
+    for(var i=0;i<listOfHotels.length;i++){
+      result = result + "Number " + (i+1) + ": " + listOfHotels[i] + ", ";
+    }
     response.say(result.substring(0,result.length-1));
 });
+
 
 module.exports = app;
