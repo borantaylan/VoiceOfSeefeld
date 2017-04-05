@@ -1,0 +1,55 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "Event"
+  ],
+  "name": "Piano music (live)",
+  "eventStatus": "http://schema.org/EventScheduled",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Natur \u0026 Spa Hotel Lärchenhof",
+    "employee": {
+      "@type": "Person",
+      "familyName": "Marcati"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Geigenbühelstr. 203",
+      "addressLocality": "Seefeld",
+      "postalCode": "6100",
+      "addressCountry": "AT",
+      "telephone": "+4352122383",
+      "faxNumber": "+4352122583",
+      "email": "info@marcati.at",
+      "url": "http://www.hotel-laerchenhof-seefeld.com"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Natur \u0026 Spa Hotel Lärchenhof",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Geigenbühelstr. 203",
+      "addressLocality": "Seefeld",
+      "postalCode": "6100",
+      "addressCountry": "AT",
+      "telephone": "+4352122383",
+      "faxNumber": "+4352122583",
+      "email": "info@marcati.at",
+      "url": "http://www.hotel-laerchenhof-seefeld.com"
+    }
+  },
+  "description": "Reservation requested, tel. 05212 2383. Detailed information on www.hotel-laerchenhof-seefeld.com.",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/1c146128-7d36-469e-84a4-0fc74342cc69/99/image.jpg",
+      "caption": "Hotel Lärchenhof"
+    }
+  ],
+  "url": [
+    "http://www.hotel-laerchenhof-seefeld.com/"
+  ],
+  "startDate": "2016-12-23T19:00:00",
+  "endDate": "2017-03-24"
+}

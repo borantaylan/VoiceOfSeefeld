@@ -1,0 +1,35 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "Store"
+  ],
+  "name": "Holz [und] schenken mit Herz",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3696313",
+    "longitude": "11.1590273"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Haus Seeblick",
+    "streetAddress": "Weidach 296",
+    "addressLocality": "Leutasch",
+    "postalCode": "6105",
+    "addressCountry": "AT",
+    "telephone": "(0043) 5214 6424",
+    "faxNumber": "(0043) 5214 6424",
+    "email": "hausseeblick@aon.at",
+    "url": "http://www.hausseeblick.net"
+  },
+  "description": "Weidach 296, Tel. \u0026 Fax. 05214-6424, www.hausseeblick.net, holzherz@aon.at\n",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/7333476f-cc63-4701-98a2-a37625af1137/99/image.jpg",
+      "caption": "Holz [und] schenken mit Herz"
+    }
+  ],
+  "url": [
+    "http://www.hausseeblick.net"
+  ]
+}

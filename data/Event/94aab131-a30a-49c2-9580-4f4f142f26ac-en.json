@@ -1,0 +1,48 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "Event"
+  ],
+  "name": "Winter Activities - Enchanting Snowshoe hike",
+  "eventStatus": "http://schema.org/EventScheduled",
+  "organizer": {
+    "@type": "Organization",
+    "name": "Informationsbüro Scharnitz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Innsbrucker Str. 282",
+      "addressLocality": "Scharnitz",
+      "postalCode": "6108",
+      "addressCountry": "AT",
+      "telephone": "+4350880540 ",
+      "faxNumber": "+4350880541",
+      "email": "info.scharnitz@seefeld.com",
+      "url": "http://www.seefeld.com"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Informationsbüro Scharnitz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Innsbrucker Str. 282",
+      "addressLocality": "Scharnitz",
+      "postalCode": "6108",
+      "addressCountry": "AT",
+      "telephone": "+4350880540 ",
+      "faxNumber": "+4350880541",
+      "email": "info.scharnitz@seefeld.com",
+      "url": "http://www.seefeld.com"
+    }
+  },
+  "description": "The Olympiaregion Seefeld’s programme of winter activities offers 15 unique experiences for young and old alike - free of charge and exclusively for Olympiaregion Seefeld Card holders! This tour takes you through the winter forest. If required you can rent snowshoes from the Information Office (rental charge: € 6.00). This tour is conducted in German and English.",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/32110273-be13-4ba3-985b-16315144ceac/99/image.jpg",
+      "caption": "Schneeschuh"
+    }
+  ],
+  "startDate": "2016-12-07T09:30:00",
+  "endDate": "2017-03-22"
+}

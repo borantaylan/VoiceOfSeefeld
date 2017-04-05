@@ -1,0 +1,142 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "LodgingBusiness"
+  ],
+  "url": [
+    "http://www.haus-tiefenbrunner.com",
+    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Haus Tiefenbrunner",
+    "streetAddress": "Moos 21 a",
+    "addressLocality": "Leutasch",
+    "postalCode": "6105",
+    "addressCountry": "AT",
+    "telephone": "(0043) 5214 6967",
+    "faxNumber": "(0043) 5214 6967",
+    "email": "haus-tiefenbrunner@gmx.at",
+    "url": "http://www.haus-tiefenbrunner.com"
+  },
+  "name": "Haus Tiefenbrunner",
+  "description": [
+    "We are located in the village of Leutasch moss in a very quiet, sunny and central location (only ca.5 minutes drive from the center Weidach away) and are an ideal starting point for numerous hiking, biking and lodge tours. The entry into the cross-country ski trail is located directly in front of the house. 4 apartments with a cozy newly setup for 2-4, 2-5 and 4-8 people. \nAlso can you expect from us: \nA lawn with deck chairs for free (summer); \nA small wellness area with a beautiful fish pond (summer); \nIntroduction to the trail in front of our house (winter); \nHeated ski (winter); \nReduced in the indoor pool and sauna in Leutasch; \nFree Toboggan hire (winter); \nFree Bike Rental (summer);",
+    "Includes: heating, water, electricity \nExclusive: Final cleaning (Whng. 2-4 pers., € 26, -; Whng. 4-8 pers., € 30, -) \nLocal tax € 1.20",
+    "From the north via toll-free Garmisch Partenkirchen + 35 km, \nMittenwald, Unterleutasch, alley, Kirchplatzl to Ortsteil moss. \nCar: From the East Highway A12/Ausfahrt Zirl East + 12 km \nFrom the West Highway A12/Ausfahrt Telfs Ost + 12 km \nRail: \"Karwendel Bahn\" Innsbruck - Garmisch \nPlane: Munich 138 km, Innsbruck 21 km, Zurich 300 km"
+  ],
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/3b95c72d-2546-4f88-bbd3-3b7e1d4eed26/99/image.jpg",
+      "caption": "Sommer"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/72b85121-44f7-41be-9aae-560fee7ff993/99/image.jpg",
+      "caption": "Winter"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/696926d0-0219-45ec-82ec-9ad1caceaba8/99/image.jpg",
+      "caption": "Garten"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/438f34aa-2f62-42f1-83a9-2990c0aec2c6/99/image.jpg",
+      "caption": "Liegewiese"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.355602457183",
+    "longitude": "11.12266421591"
+  },
+  "currenciesAccepted": "EUR",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Apartment, shower, toilet, 1 bed room",
+      "description": "A 2 room apartment (deer) in the 55m ² for 2.Obergeschoß \n2-5 persons. \nEquipped comfortably equipped with shower / WC, \n1 bedroom, living room with kitchen (microwave, dishes, etc.) and sleeping facilities, a cloakroom. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. \nSouth-facing balcony with stunning panoramic views.",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "apartment/1 bedroom/shower, WC",
+          "numberOfRooms": "2.0",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "5",
+            "minValue": "1"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Apartment, shower, toilet, 1 bed room",
+      "description": "A 2 room apartment (rabbit) in 1.Obergeschoß 53m ² for 2-4 persons. \nEquipped comfortably equipped with shower, separate WC, \n1 bedroom, living room with sleeping facilities, kitchen \n(Microwave, dishes, etc.), wardrobe. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. \nEast and south-facing terrace, with magnificent panoramic view.",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "apartment/1 bedroom/shower, WC",
+          "numberOfRooms": "2.0",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "1"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Apartment, shower, toilet, 1 bed room",
+      "description": "A 2 room apartment (Fox) in the slightly sunken floor 45m² for 2-4 persons. \nEquipped comfortably equipped with shower / WC, \n1 bedroom, living room with sleeping accommodation, kitchen (microwave, dishes, etc.) wardrobe. \nThis apartment is also very bright and with a clear view outside. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. \nEast and south-facing terrace, with magnificent panoramic view.",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "apartment/1 bedroom/shower, WC",
+          "numberOfRooms": "2.0",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "1"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Apartment, shower and bath, toilet, 3 bed rooms",
+      "description": "A 4 room apartment (squirrel) in 2.Obergeschoß 65m ² for 4-8 persons. \nEquipped with very comfortable en-suite bathroom (bath, shower, \nDouble washbasin and toilet), \n2 bedrooms, 1 nursery, living room with kitchen (microwave, dishes, etc.) and sleeping facilities, a cloakroom. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. \nSouth and east, with a magnificent panoramic view.",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "Apartment",
+            "Product"
+          ],
+          "name": "apartment/3 bedrooms/shower,bath tub,WC",
+          "numberOfRooms": "4.0",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "9",
+            "minValue": "2"
+          }
+        }
+      ]
+    }
+  ]
+}

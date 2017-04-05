@@ -1,0 +1,35 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "BeautySalon"
+  ],
+  "name": "Hotel Klosterbräu",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3288928413112",
+    "longitude": "11.1858082576721"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Seyrling GmbH \u0026 CoKG",
+    "streetAddress": "Klosterstr. 30",
+    "addressLocality": "Seefeld",
+    "postalCode": "6100",
+    "addressCountry": "AT",
+    "telephone": "+4352122621",
+    "faxNumber": "+4352123885",
+    "email": "info@klosterbraeu.com",
+    "url": "http://www.klosterbraeu.com"
+  },
+  "description": "Massages, sauna, steam bath, infra-red cabin, cosmetic and body treatments, fitness room, private spa\u0027s. Full use of the spa facilities and swimming pool by booking an wellnesstreatment for at least € 70,-.",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/934f3b08-c265-41d6-894a-774a617e1708/99/image.jpg",
+      "caption": "Klosterbräu"
+    }
+  ],
+  "url": [
+    "http://www.klosterbraeu.com"
+  ]
+}

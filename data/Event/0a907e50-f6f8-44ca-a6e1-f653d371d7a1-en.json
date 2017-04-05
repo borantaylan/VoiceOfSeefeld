@@ -1,0 +1,60 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "Event"
+  ],
+  "name": "Village Festival of Seefeld´s associations",
+  "eventStatus": "http://schema.org/EventScheduled",
+  "organizer": {
+    "@type": "Organization",
+    "name": "TVB Zentrale",
+    "employee": {
+      "@type": "Person",
+      "givenName": "Marco",
+      "familyName": "Frezzini"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Heilbadstr. 827",
+      "addressLocality": "Seefeld",
+      "postalCode": "6100",
+      "addressCountry": "AT",
+      "telephone": "+4350880562 ",
+      "email": "marco.frezzini@seefeld.com",
+      "url": "http://www.seefeld.com"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "TVB Zentrale",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Heilbadstr. 827",
+      "addressLocality": "Seefeld",
+      "postalCode": "6100",
+      "addressCountry": "AT",
+      "telephone": "+4350880597",
+      "faxNumber": "+435088861",
+      "email": "kari.kraus@seefeld.com",
+      "url": "http://www.seefeld.com"
+    }
+  },
+  "description": "Numerous local clubs and associations join forces every year to organise a memorable event with toe-tapping rhythms and mouth-watering treats in Seefeld’s centre. A wide variety of attractions, like dance performances of the local group “Seefelder Plattler“, culinary highlights, as well as live performances, entertainment and live music ensure a fantastic atmosphere during this convivial festival in the centre of Seefeld. Further information is provided in all information offices of Olympiaregion Seefeld and on www.seefeld.com.",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/7c49999d-97a0-42d0-b593-7ddb7a737558/99/image.jpg",
+      "caption": "Dorffest"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/9dd165ed-4564-4791-8c6b-837c391f79d7/99/image.jpg",
+      "caption": "Piktogramm"
+    }
+  ],
+  "url": [
+    "http://www.seefeld.com"
+  ],
+  "startDate": "2017-07-29T14:00:00",
+  "endDate": "2017-07-29"
+}

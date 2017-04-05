@@ -1,0 +1,35 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "TouristInformationCenter"
+  ],
+  "name": "tourist office Leutasch",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.3720352145058",
+    "longitude": "11.1645507079693"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Informationsbüro Leutasch",
+    "streetAddress": "Weidach 320",
+    "addressLocality": "Leutasch",
+    "postalCode": "6105",
+    "addressCountry": "AT",
+    "telephone": "+43-50880510",
+    "faxNumber": "+43-50880811",
+    "email": "info.leutasch@seefeld.com",
+    "url": "http://www.seefeld.com"
+  },
+  "description": "Leutasch - is good for me \n\nOpening times:\n\nuntil 14th of May:\nMonday-Friday: 9.00 am - 5.00 pm\nException: \n15th of April: 9.00 am - 12.00 noon\n16th of April: 10.00 am - 12.00 noon\n\n15th of May until 05th of June:\nMonday-Friday: 9.00 am - 5.00 pm\nSaturday: 9.00 am - 12.00 noon\n25th of May, 4th and 5th of June: 10.00 am - 12.00 noon\n\noff 6th of June:\nMonday-Friday: 9.00 am - 6.00 pm\nSaturday: 9.00 am - 12.00 noon (5th \u0026 12th of August also from 2.00 pm - 5.00 pm)\nSundays \u0026 Holidays:(15th of June and from 2nd of July between 17th of September:10 am - 12.00 noon and on 6th, 13th \u0026 15th of August also from 2.00 pm - 5.00 pm)\n\n\n\n\n",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/7cf80669-d2e8-4dbf-8f07-eb6261dd0eaa/99/image.jpg",
+      "caption": "Logo"
+    }
+  ],
+  "url": [
+    "http://www.seefeld.com"
+  ]
+}

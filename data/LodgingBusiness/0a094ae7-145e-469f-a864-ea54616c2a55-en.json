@@ -1,0 +1,1103 @@
+{
+  "@context": "http://schema.org",
+  "@type": [
+    "Hotel"
+  ],
+  "url": [
+    "https://www.youtube.com/embed/3sJ63_mpPFg?rel\u003d0",
+    "http://www.xander-leutasch.at",
+    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Sporthotel Xander",
+    "streetAddress": "Kirchplatzl 147",
+    "addressLocality": "Leutasch",
+    "postalCode": "6105",
+    "addressCountry": "AT",
+    "telephone": "(0043) 5214 6581",
+    "faxNumber": "(0043) 5214 6943",
+    "email": "info@xander-leutasch.at",
+    "url": "http://www.xander-leutasch.at"
+  },
+  "name": "Sporthotel Xander",
+  "description": [
+    "In the heart of Leutasch the family run **** Hotel Xander, the oldest inn in the valley, is tucked away next to the onion-domed village-church. 150 beds in 12 double-rooms and 55 apartments with lounge area, bath/shower/WC. Telephone, safe, radio, SAT-TV and kitchenette.",
+    "dog per day 11,00 €\ngarage 10,00 € per day\nsauna, swiming pool is free\njacuzzi + solarium 7,00 €\nlaundry service 8,00 €\nlocal tax excl.",
+    "locationplan: the Hotel is in front of the church at the district Kirchplatzl.\nCheck in 14.00  Check out 10.00"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.1",
+    "reviewCount": "205"
+  },
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/537c5c99-31af-45dc-943a-9a7fefe315ba/99/image.jpg",
+      "caption": "Xander komplett"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/9aac6b36-d27b-4060-a012-a94caa2ff41e/99/image.gif",
+      "caption": "Logo"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/6ceb14dd-8f3f-4949-9bb9-947c98bc8350/99/image.jpg",
+      "caption": "Xander Komplettansicht"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/505d7457-fb07-4375-8c8f-88ab4df57ae7/99/image.jpg",
+      "caption": "Winter"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/55a27b2b-329d-469e-9f21-a709d13708bd/99/image.jpg",
+      "caption": "Sommer"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/639d98ca-d6b3-4342-80a3-ab46eccc61b0/99/image.jpg",
+      "caption": "Xander Front 14"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/2c7ab416-549a-495a-8e6b-045d0a5e75e4/99/image.jpg",
+      "caption": "Winteransicht"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/fd671f01-9fba-4d33-bb79-575165d99778/99/image.jpg",
+      "caption": "Sommeransicht"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/9d011174-62c5-4ef3-af1a-6a21dda0df53/99/image.jpg",
+      "caption": "Blick auf die Munde"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/4c06334f-c6c1-48ef-99bf-1029e4574f3a/99/image.jpg",
+      "caption": "Garten mit Blick ins Gaistal"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/7ecf2f90-b885-4440-b58e-45dea4b9944d/99/image.jpg",
+      "caption": "Gaistal"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/7274df6c-2133-4c79-b85c-99ed7eeec7f9/99/image.jpg",
+      "caption": "Gaistal 3"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/d7530094-a736-4940-88b7-1d04411ef3ef/99/image.jpg",
+      "caption": "Gaistal 4"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/ecf0f174-4281-4790-8ab3-7ee612a79a9a/99/image.jpg",
+      "caption": "Bad "
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/dce5dafa-a27f-4f29-a5aa-d86779e6ad0c/99/image.jpg",
+      "caption": "Junior 1"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/5d34b86a-1501-4834-907f-b7b1c5177598/99/image.jpg",
+      "caption": "Junior 4"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/3b40661c-26b1-4986-aecf-90228e806efe/99/image.jpg",
+      "caption": "Suite 1"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/bada03dc-bc14-4c43-b047-c283103f0b47/99/image.jpg",
+      "caption": "Suite 2"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/88692db5-117c-45b4-be24-a691d010a069/99/image.jpg",
+      "caption": "Bad Suite"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/75ac1f1d-c1ec-4324-9bb3-552f2ad1ba38/99/image.jpg",
+      "caption": "Pool"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/06aab475-e35a-47ac-bc68-c2ef62cb14f8/99/image.jpg",
+      "caption": "Wellness"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/2e048ee2-baad-40c2-8045-2db12328e1a1/99/image.jpg",
+      "caption": "Zirbenstube"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/24a0c1cb-eb5b-4520-8bd1-d8c4646651c2/99/image.jpg",
+      "caption": "Wintergarten 2"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/eb580936-df96-453c-a533-37ada000665a/99/image.jpg",
+      "caption": "Frühstücksbuffet"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/739d8244-b96b-4a79-98d0-bd56f932601d/99/image.jpg",
+      "caption": "Loipenparadies"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://resc.deskline.net/images/SEE/1/fe6f1246-a328-4455-944d-bf0019968e57/99/image.jpg",
+      "caption": "Winterstimmung"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.370270446539",
+    "longitude": "11.143009989147"
+  },
+  "currenciesAccepted": "EUR",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Double room, bath, toilet",
+      "description": "30m², for max. 3 Pers., one - room apartment east balcony, Ahrnspitze;\n\n",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "double room with bath tub, WC",
+          "description": "1-room apartment for max. 3 persons, about 30 m² to the east with a sunny balcony and beautiful view to the Ahrnspitze.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "description": "1-room apartment for max. 3 persons, about 30 m² to the east with a sunny balcony and beautiful view to the Ahrnspitze.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/5bdf6d09-089d-49ff-a18e-dc83af9a5d7d/99/image.jpg",
+              "caption": "Wander"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/d2018514-d584-41f2-b6d8-f9444f1d265a/99/image.jpg",
+              "caption": "Relax"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/ad07bbf1-20d5-4a88-8d27-3f35afcb7eb4/99/image.jpg",
+              "caption": "Golf"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/fb9d427a-b7a4-4e50-b42c-148d0fc42f48/99/image.jpg",
+              "caption": "Golf"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/351032d7-8b6c-45a0-9689-535d69f65141/99/image.jpg",
+              "caption": "Feuerwerk"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/1484973f-7a64-4f2e-9dc1-fb0212757deb/99/image.jpg",
+              "caption": "Weihnachten"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/6123b716-26a6-4a8d-88db-63450c0ad917/99/image.jpg",
+              "caption": "Langlauf Gaudi"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/aa5ce24a-944a-45c1-8622-8a52eeb26d43/99/image.jpg",
+              "caption": "Weisse Wochen"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/703e6ca1-51ad-48cc-b548-67a18b155f35/99/image.jpg",
+              "caption": "Wanderpauschale"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/b0ab98da-a4af-4acd-afb1-afe15ede7a71/99/image.jpg",
+              "caption": "Wander"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "1"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "79.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "62.50",
+          "maxPrice": "150.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "57.33",
+          "maxPrice": "136.53",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "106.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "84.50",
+          "maxPrice": "172.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "77.13",
+          "maxPrice": "156.33",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "529.00",
+          "maxPrice": "529.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "529.00",
+          "maxPrice": "529.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "289.00",
+          "maxPrice": "289.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "289.00",
+          "maxPrice": "289.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "429.00",
+          "maxPrice": "429.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "429.00",
+          "maxPrice": "429.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "819.00",
+          "maxPrice": "819.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "819.00",
+          "maxPrice": "819.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "1069.00",
+          "maxPrice": "1069.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "1069.00",
+          "maxPrice": "1069.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "829.00",
+          "maxPrice": "829.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "829.00",
+          "maxPrice": "829.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "679.00",
+          "maxPrice": "679.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "679.00",
+          "maxPrice": "679.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "679.00",
+          "maxPrice": "679.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "679.00",
+          "maxPrice": "679.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "249.00",
+          "maxPrice": "249.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "249.00",
+          "maxPrice": "249.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "529.00",
+          "maxPrice": "529.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "529.00",
+          "maxPrice": "529.00",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Double room, bath, toilet",
+      "description": [
+        "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette ",
+        "1-room apartment for max. 3 persons, about 30 m² to the west with a sunny balcony and beautiful view Gaistal.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette"
+      ],
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "double room with bath tub, WC",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "89.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "74.50",
+          "maxPrice": "171.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "68.13",
+          "maxPrice": "155.43",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "118.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "96.50",
+          "maxPrice": "193.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "87.93",
+          "maxPrice": "175.23",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Double room, bath, toilet",
+      "description": "40 m², for max. 3 pers., with living area without balcony.\n\n",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "double room with bath tub, WC",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/edb926e6-025f-43ad-a345-4a11019807db/99/image.jpg",
+              "caption": "Romantik"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "url": "http://resc.deskline.net/images/SEE/1/e95b2998-35d4-4b41-800e-2f8248cd481a/99/image.jpg",
+              "caption": "Romantik"
+            }
+          ],
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "2",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Double room, bath, toilet",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "3",
+            "minValue": "1"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "85.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "68.50",
+          "maxPrice": "177.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "62.73",
+          "maxPrice": "160.83",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "235.00",
+          "maxPrice": "235.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "738.00",
+          "maxPrice": "738.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 1",
+          "minPrice": "9999.00",
+          "maxPrice": "9999.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "90.50",
+          "maxPrice": "199.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "82.53",
+          "maxPrice": "180.63",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Family room, bath, toilet",
+      "description": "50m² for max. 4 people, two-room-apartment.",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "family room with bath tub, WC",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Family room, bath, toilet",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "82.50",
+          "maxPrice": "198.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "69.67",
+          "maxPrice": "154.67",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "57.25",
+          "maxPrice": "138.25",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "104.50",
+          "maxPrice": "220.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "91.67",
+          "maxPrice": "176.67",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "79.25",
+          "maxPrice": "160.25",
+          "priceCurrency": "EUR"
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "name": "Family room, shower and bath tub",
+      "description": "3-room apartment for max. 6 people ca 70m² with balcony. With 2 separate bedrooms and 1 living room, with bath / WC, shower / WC, telephone, high-speed Internet connection, radio, satellite TV, safe and small kitchenette",
+      "availability": "http://schema.org/InStock",
+      "itemOffered": [
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "family room with shower, bath tub",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Family room, shower and bath tub",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Family room, shower and bath tub",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        },
+        {
+          "@type": [
+            "HotelRoom",
+            "Product"
+          ],
+          "name": "Family room, shower and bath tub",
+          "bed": {
+            "@type": "BedDetails",
+            "numberOfBeds": "1"
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": "4",
+            "minValue": "2"
+          }
+        }
+      ],
+      "priceSpecification": [
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "90.00",
+          "maxPrice": "213.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "74.67",
+          "maxPrice": "164.67",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "61.00",
+          "maxPrice": "145.75",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "1379.00",
+          "maxPrice": "1379.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "1379.00",
+          "maxPrice": "1379.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "1379.00",
+          "maxPrice": "1379.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "689.00",
+          "maxPrice": "689.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "689.00",
+          "maxPrice": "689.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "689.00",
+          "maxPrice": "689.00",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 2",
+          "minPrice": "112.00",
+          "maxPrice": "235.50",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 3",
+          "minPrice": "96.67",
+          "maxPrice": "186.67",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "PriceSpecification",
+          "description": "Pax 4",
+          "minPrice": "83.00",
+          "maxPrice": "167.75",
+          "priceCurrency": "EUR"
+        }
+      ]
+    }
+  ]
+}

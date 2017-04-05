@@ -33,6 +33,7 @@ app.intent('Locality', {
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
+
     //TODO use param to retrieve hotel lists
     var listOfHotels = ["Sporthotel Xander","Pension Krosbacher","Haus Tiefenbrunner"] ;
     var result = "There are " + listOfHotels.length + " hotels in " + param + ":"  ;
