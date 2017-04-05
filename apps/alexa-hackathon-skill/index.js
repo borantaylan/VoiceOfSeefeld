@@ -78,7 +78,7 @@ app.intent('Information', {
     ]
 }, function(request, response) {
     var param = request.slot("Name");
-    response.say("I will send you the information on your phone.");
+    //response.say("I will send you the information on your phone.");
     response.card({
         type: "Standard",
         title: "Informations about Sporthotel Xander", // this is not required for type Simple or Standard 
@@ -137,7 +137,7 @@ app.intent('Booking', {
         "Can you do a reservation for me"
     ]
 }, function(request, response) {
-    response.say("Sorry, i can not do that, but I will send you the number.");
+    //response.say("Sorry, i can not do that, but I will send you the number.");
     response.card({
         type: "Simple",
         content: "Telephone number of the hotel: +436504753001"
