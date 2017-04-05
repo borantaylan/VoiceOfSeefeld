@@ -181,7 +181,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room with bath and WC",
+          "name": "Double room with bath and toilet.",
           "description": "1-room apartment for max. 3 persons, about 30 m² to the east with a sunny balcony and beautiful view to the Ahrnspitze.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette",
           "bed": {
             "@type": "BedDetails",
@@ -198,7 +198,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "description": "1-room apartment for max. 3 persons, about 30 m² to the east with a sunny balcony and beautiful view to the Ahrnspitze.\nFacilities: bath / WC, telephone, radio, high-speed Internet connection, satellite TV, safe and kitchenette",
           "bed": {
             "@type": "BedDetails",
@@ -215,7 +215,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -238,7 +238,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -261,7 +261,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -284,7 +284,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -307,7 +307,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -330,7 +330,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -353,7 +353,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -376,7 +376,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -399,7 +399,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -422,7 +422,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -639,7 +639,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "double room with bath tub, WC",
+          "name": "Double room with bath tub and WC.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -655,7 +655,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath and toilet.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -723,7 +723,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "double room with bath tub, WC",
+          "name": "Double room with bath tub and toilet.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -739,7 +739,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath tub and toilet.",
           "image": [
             {
               "@type": "ImageObject",
@@ -762,12 +762,12 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath tub and toilet.",
           "image": [
             {
               "@type": "ImageObject",
               "url": "http://resc.deskline.net/images/SEE/1/e95b2998-35d4-4b41-800e-2f8248cd481a/99/image.jpg",
-              "caption": "Romantik"
+              "caption": "Romantik".
             }
           ],
           "bed": {
@@ -785,7 +785,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Double room, bath, toilet",
+          "name": "Double room with bath tub and toilet.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -951,7 +951,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "family room with shower, bath tub",
+          "name": "Family room with shower and a bath tub.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -967,7 +967,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Family room, shower and bath tub",
+          "name": "Family room with shower and a bath tub.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -983,7 +983,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Family room, shower and bath tub",
+          "name": "Family room with shower and a bath tub.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
@@ -999,7 +999,7 @@
             "HotelRoom",
             "Product"
           ],
-          "name": "Family room, shower and bath tub",
+          "name": "Family room with shower and bath tub.",
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": "1"
