@@ -16,8 +16,8 @@ Store.ImageObject.url
 Store.ImageObject.caption
 
 
-
-
-
-
+Dialog:
+"What {BeautySalon|Store|TouristInformationCenter} is in {Seefeld}?" - "There is {1} {BeautySalon|Store|TouristInformationCenter} in {Seefeld}. Number 1: {name_of_salon}. Number 2:..."
+"Send me detail information about {name}?" Wildcard (Url, desc, img, address)
+"Send me the contact number of {name}?" Wildcard
 

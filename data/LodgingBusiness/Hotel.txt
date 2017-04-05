@@ -16,6 +16,14 @@ Hotel.Offer.description
 Hotel.ImageObject.url
 Hotel.ImageObject.caption
 
+Dialog:
+"Where can I stay in {Seefeld}?" - "There are {len} options for you number 1 {name}, number 2.."
+"Send me the information about {name}?" Wildcard
+"Are there available rooms in {name}?" - "There are {len} rooms available."
+"Where is {name} located?" - "{name} is located in {address}"
+"Book a room for me" - "Sorry I cannot do that, but I send you the number."
+
+
 
 
 
