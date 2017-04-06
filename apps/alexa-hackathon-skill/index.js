@@ -502,7 +502,7 @@ app.intent('Salut', {
     ]
 }, function(request, response) {
     var param = request.slot("Place");
-    response.say(param + " is a really cool place. Do you want me to send you some pictures?").reprompt();
+    response.say(param + " is a really cool place. Should I send you pictures?").reprompt();
     request.getSession().set("decision",true);
     request.getSession().set("place",param);
 });
