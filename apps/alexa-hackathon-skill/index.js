@@ -592,15 +592,4 @@ app.intent('AMAZON.StopIntent', {
     response.say("Good bye. See you soon!").shouldEndSession(true);
     });
 
-app.intent('Gratitude', {
-    "slots": {},
-    "utterances": [
-        "Thanks",
-        "Thank you"
-    ]
-}, function(request, response) {
-    response.say("You're welcome!").reprompt("Take care, goodbye!").shouldEndSession(true);
-});
-
-
 module.exports = app;
