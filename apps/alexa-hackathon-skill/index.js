@@ -63,7 +63,7 @@ app.intent('Locality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "hotel");
-    response.say(result.substring(0, result.length - 2)).reprompt().shouldEndSession(false);
+    response.say(result.substring(0, result.length - 2)+"Which number do you want to learn about?").reprompt("Can I help you about anything?").shouldEndSession(false);
 });
 
 app.intent('Information', {
@@ -176,8 +176,8 @@ app.intent('EventLocality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "What events are in {seefeld|Locality}",
-        "What events are in {Scharnitz|Locality}"
+        "What events take place in {seefeld|Locality}",
+        "What events take place in {Scharnitz|Locality}"
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
@@ -201,7 +201,7 @@ app.intent('EventLocality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "event");
-    response.say(result.substring(0, result.length - 2)).reprompt().shouldEndSession(false);
+    response.say(result.substring(0, result.length - 2)+"Which number do you want to learn about?").reprompt().shouldEndSession(false);
 });
 
 app.intent('EventInformation', {
@@ -418,7 +418,12 @@ app.intent("numberDialog",{
     "utterances": [
         "Send me the information about {Number One|inputNum}",
         "Send me the information about {Number Two|inputNum}",
-        "Send me the information about {Number Three|inputNum}"
+        "Send me the information about {Number Three|inputNum}",
+        "{Number One|inputNum}",
+        "{Number Two|inputNum}",
+        "{Number Three|inputNum}",
+        "{none|inputNum}",
+        "{none of them|inputNum}"
     ]
 }, function(request, response) {
   var param = request.slot("inputNum");
@@ -445,7 +450,7 @@ app.intent("numberDialog",{
         }).shouldEndSession(false);
     }
     if(param==="Number Two"){
-        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt().shouldEndSession(false);
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt('is there anything I can help?').shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[1]['startDate']+ "\n It ends at "+numberedArrays[1]['endDate']
@@ -483,8 +488,11 @@ app.intent("numberDialog",{
             }
         }).shouldEndSession(false);
     }
+    if(param==="none"||param==="none of them"){
+        response.say("Can I help you with anything else?").reprompt().shouldEndSession(false);
+    }
   }
-  else response.say("You're now on vacation.").reprompt().shouldEndSession(false);
+  else response.say("I dont have any information about it.").reprompt().shouldEndSession(false);
 });
 
 app.intent('Salut', {
@@ -492,12 +500,12 @@ app.intent('Salut', {
         "Place": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Fine thanks I want to travel to {seefeld|Place} soon",
-        "Fine thanks I want to travel to {Leutasch|Place} soon",
-        "Fine thanks I want to travel to {Scharnitz|Place} soon",
-        "Fine thanks is {seefeld|Place} a good place to visit",
-        "Fine thanks is {Leutasch|Place} a good place to visit",
-        "Fine thanks is {Scharnitz|Place} a good place to visit"
+        "Fine thanks by the way I want to travel to {seefeld|Place} soon",
+        "Fine thanks by the way I want to travel to {Leutasch|Place} soon",
+        "Fine thanks by the way I want to travel to {Scharnitz|Place} soon",
+        "Fine thanks by the way is {seefeld|Place} a good place to visit",
+        "Fine thanks by the way is {Leutasch|Place} a good place to visit",
+        "Fine thanks by the way is {Scharnitz|Place} a good place to visit"
     ]
 }, function(request, response) {
     var param = request.slot("Place");
@@ -527,7 +535,7 @@ app.intent('AnswerYes', {
 }, function(request, response) {
     if(request.getSession().get("decision") === true){
         var param = request.getSession().get("place").toLowerCase();
-        response.say("Ok i am sending a picture to your phone.").reprompt().shouldEndSession(false);
+        response.say("Ok i am sending a picture to your phone with related link.").reprompt("Can I help you with anything else?").shouldEndSession(false);
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -564,8 +572,8 @@ app.intent('AnswerNo', {
     ]
 }, function(request, response) {
     if(request.getSession().get('decision')===true){
-        response.say("I am sending you anyway, if you want to take a look").reprompt().shouldEndSession(false);
         var param = request.getSession().get("place").toLowerCase();
+        response.say("I am sending you anyway, if you want to take a look").reprompt("Don't you like "+param+"?").shouldEndSession(false);
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
