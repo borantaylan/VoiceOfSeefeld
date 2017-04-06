@@ -12,15 +12,13 @@ var parser = require("./parser.js");
 
 app.launch(function(request, response) {
 
-    var listOfHotelJSONs = [];
-    listOfHotelJSONs = parser.parseFile("LodgingBusiness");
-    console.log(listOfHotelJSONs);
+    var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
+    var listOfEventJSONs = parser.parseFile("Event");
+    var listOfInfrastructureJSONs = parser.parseFile("Infrastructure");
+
     request.getSession().set("listOfHotels", listOfHotelJSONs);
-    var listOfEventJSONs = [];
-    listOfEventJSONs = parser.parseFile("Event");
-    console.log(listOfEventJSONs);
     request.getSession().set("listOfEvents", listOfEventJSONs);
-    console.log(listOfHotelJSONs);
+    request.getSession().set("listOfInfrastructureJSONs", listOfInfrastructureJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
 });
@@ -45,19 +43,25 @@ app.intent('Locality', {
 }, function(request, response) {
     var param = request.slot("AddressLocality");
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    var filteredHotelJSONs = [];
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
         if(hotel['locality']===param){
             listOfHotels.push(hotel['name']);
+            filteredHotelJSONs.push(hotel);
         }
     });
 
-    //TODO use param to retrieve hotel lists
-    var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: ";
 
+    var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: ";
+    var numberedArrays = [];
     for (var i = 0; i < listOfHotels.length; i++) {
+        var temp = {};
+        temp[i + 1] = filteredHotelJSONs[i];
+        numberedArrays.push(temp);
         result = result + "<p>Number " + (i + 1) + ": " + listOfHotels[i] + "</p>, ";
     }
+    request.getSession().set("numberedArrays", numberedArrays);
     response.say(result.substring(0, result.length - 2));
 });
 
@@ -403,4 +407,21 @@ app.intent('EventPhoto', {
     }
 });
 
+app.intent("numberDialog",{
+    "slots": {"inputNum": "AMAZON.LITERAL"},
+    "utterances": [
+        "Send me the information about {Number One|inputNum}",
+        "Send me the information about {Number Two|inputNum}",
+        "Send me the information about {Number Three|inputNum}"
+    ]
+}, function(request, response) {
+  var param = request.slot("inputNum");
+  var numberedArrays = request.getSession().get("numberedArrays");
+  if(numberedArrays.length>0){
+    if(param==="Number One"){response.say("1");}
+    if(param==="Number Two"){response.say("2");}
+    if(param==="Number Three"){response.say("3");}
+  }
+  else response.say("You're now on vacation.");
+});
 module.exports = app;

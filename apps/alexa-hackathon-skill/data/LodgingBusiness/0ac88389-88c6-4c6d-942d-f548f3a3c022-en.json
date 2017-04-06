@@ -161,7 +161,7 @@
             "Product"
           ],
           "name": "Apartment, shower, toilet, 1 bed room",
-          "numberOfRooms": "2.0", "Apartment with 1 bed room,  shower and a toilet.
+          "numberOfRooms": "2.0",
           "occupancy": {
             "@type": "QuantitativeValue",
             "maxValue": "3",
