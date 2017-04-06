@@ -13,13 +13,6 @@ var listOfHotelJSONs;
 app.launch(function(request, response) {
 
     //var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
-    listOfHotelJSONs = [{
-      "locality" : "Seefeld",
-      "name" : "lol"
-    },{
-      "locality" : "Seefeld",
-      "name" : "haha"
-    }];
     //request.getSession().set("listOfHotels", listOfHotelJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
@@ -43,6 +36,13 @@ app.intent('Locality', {
         "Where can I stay in {Leutasch|AddressLocality}"
     ]
 }, function(request, response) {
+    listOfHotelJSONs = [{
+      "locality" : "Seefeld",
+      "name" : "lol"
+    },{
+      "locality" : "Seefeld",
+      "name" : "haha"
+    }];
     var param = request.slot("AddressLocality");
     //var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var filteredHotelJSONs = [];
