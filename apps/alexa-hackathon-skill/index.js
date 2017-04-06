@@ -12,8 +12,14 @@ var parser = require("./parser.js");
 
 app.launch(function(request, response) {
 
-    var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
-
+    //var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
+    var listOfHotelJSONs = [{
+      "locality" : "Seefeld",
+      "name" : "lol"
+    },{
+      "locality" : "Seefeld",
+      "name" : "haha"
+    }];
     request.getSession().set("listOfHotels", listOfHotelJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
