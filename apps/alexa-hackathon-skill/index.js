@@ -12,7 +12,17 @@ var parser = require("./parser.js");
 
 app.launch(function(request, response) {
 
-    var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
+    //var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
+    var listOfHotelJSONs = [{
+      "locality" : "Seefeld",
+      "name" : "lol"
+    },{
+      "locality" : "Seefeld",
+      "name" : "haha"
+    }];
+
+
+
     var listOfEventJSONs = parser.parseFile("Event");
     var listOfInfrastructureJSONs = parser.parseFile("Infrastructure");
 
@@ -582,4 +592,3 @@ app.intent('AnswerNo', {
 });
 
 module.exports = app;
-
