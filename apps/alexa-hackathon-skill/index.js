@@ -19,7 +19,7 @@ app.launch(function(request, response) {
     request.getSession().set("listOfHotels", listOfHotelJSONs);
     request.getSession().set("listOfEvents", listOfEventJSONs);
     request.getSession().set("listOfInfrastructureJSONs", listOfInfrastructureJSONs);
-    response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
+    response.say('Welcome to Voice of seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
 });
 
@@ -36,8 +36,8 @@ app.intent('Locality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Where can I stay in {Seefeld|AddressLocality}",
-        "Where can I stay in {Mosern|AddressLocality}",
+        "Where can I stay in {seefeld|AddressLocality}",
+        "Where can I stay in {mosern|AddressLocality}",
         "Where can I stay in {Leutasch|AddressLocality}"
     ]
 }, function(request, response) {
@@ -47,7 +47,6 @@ app.intent('Locality', {
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
         if(hotel['locality']===param.toLowerCase()){
-            console.log("if")
             listOfHotels.push(hotel['name']);
             filteredHotelJSONs.push(hotel);
         }
@@ -177,7 +176,7 @@ app.intent('EventLocality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "What events are in {Seefeld|Locality}",
+        "What events are in {seefeld|Locality}",
         "What events are in {Scharnitz|Locality}"
     ]
 }, function(request, response) {
@@ -211,11 +210,11 @@ app.intent('EventInformation', {
     },
     "utterances": [
         "Send me the information about {Piano music live|Name}",
-        "Send me the information about {Village Festival of Seefelds associations|Name}",
+        "Send me the information about {Village Festival of seefelds associations|Name}",
         "Send me the information about {Winter Activities Enchanting Snowshoe hike|Name}",
         "Send me the information about {Concert of French choir Le Diairi|Name}",
         "Can you send me information about {Piano music live|Name}",
-        "Can you send me information about {Village Festival of Seefelds associations|Name}",
+        "Can you send me information about {Village Festival of seefelds associations|Name}",
         "Can you send me information about {Winter Activities Enchanting Snowshoe hike|Name}",
         "Can you send me information about {Concert of French choir Le Diairi|Name}"
     ]
@@ -258,11 +257,11 @@ app.intent('StartEvent', {
     },
     "utterances": [
         "When is {Piano music live|Name}",
-        "When is {Village Festival of Seefelds associations|Name}",
+        "When is {Village Festival of seefelds associations|Name}",
         "When is {Winter Activities Enchanting Snowshoe hike|Name}",
         "When is {Concert of French choir Le Diairi|Name}",
         "When does {Piano music live|Name} start",
-        "When does {Village Festival of Seefelds associations|Name} start",
+        "When does {Village Festival of seefelds associations|Name} start",
         "When does {Winter Activities Enchanting Snowshoe hike|Name} start",
         "When does {Concert of French choir Le Diairi|Name} start"
     ]
@@ -288,11 +287,11 @@ app.intent('EndEvent', {
     },
     "utterances": [
         "When is {Piano music live|Name} finished",
-        "When is {Village Festival of Seefelds associations|Name} finished",
+        "When is {Village Festival of seefelds associations|Name} finished",
         "When is {Winter Activities Enchanting Snowshoe hike|Name} finished",
         "When is {Concert of French choir Le Diairi|Name} finished",
         "When does {Piano music live|Name} end",
-        "When does {Village Festival of Seefelds associations|Name} end",
+        "When does {Village Festival of seefelds associations|Name} end",
         "When does {Winter Activities Enchanting Snowshoe hike|Name} end",
         "When does {Concert of French choir Le Diairi|Name} end"
     ]
@@ -318,15 +317,15 @@ app.intent('EventLocation', {
     },
     "utterances": [
         "Where is {Piano music live|Name} located",
-        "Where is {Village Festival of Seefelds associations|Name} located",
+        "Where is {Village Festival of seefelds associations|Name} located",
         "Where is {Winter Activities Enchanting Snowshoe hike|Name} located",
         "Where is {Concert of French choir Le Diairi|Name} located",
         "Where is {Piano music live|Name}",
-        "Where is {Village Festival of Seefelds associations|Name}",
+        "Where is {Village Festival of seefelds associations|Name}",
         "Where is {Winter Activities Enchanting Snowshoe hike|Name}",
         "Where is {Concert of French choir Le Diairi|Name}",
         "What is the address of {Piano music live|Name}",
-        "What is the address of {Village Festival of Seefelds associations|Name}",
+        "What is the address of {Village Festival of seefelds associations|Name}",
         "What is the address of {Winter Activities Enchanting Snowshoe hike|Name}",
         "What is the address of {Concert of French choir Le Diairi|Name}"
     ]
@@ -353,7 +352,7 @@ app.intent('EventContact', {
     },
     "utterances": [
         "Tell me the contact of {Piano music live|Name}",
-        "Tell me the contact of {Village Festival of Seefelds associations|Name}",
+        "Tell me the contact of {Village Festival of seefelds associations|Name}",
         "Tell me the contact of {Winter Activities Enchanting Snowshoe hike|Name}",
         "Tell me the contact of {Concert of French choir Le Diairi|Name}"
     ]
@@ -383,7 +382,7 @@ app.intent('EventPhoto', {
     },
     "utterances": [
         "Send me a image of {Piano music live|Name}",
-        "Send me a image of {Village Festival of Seefelds associations|Name}",
+        "Send me a image of {Village Festival of seefelds associations|Name}",
         "Send me a image of {Winter Activities Enchanting Snowshoe hike|Name}",
         "Send me a image of {Concert of French choir Le Diairi|Name}"
     ]
@@ -493,10 +492,10 @@ app.intent('Salut', {
         "Place": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Fine thanks I want to travel to {Seefeld|Place} soon",
+        "Fine thanks I want to travel to {seefeld|Place} soon",
         "Fine thanks I want to travel to {Leutasch|Place} soon",
         "Fine thanks I want to travel to {Scharnitz|Place} soon",
-        "Fine thanks is {Seefeld|Place} a good place to visit",
+        "Fine thanks is {seefeld|Place} a good place to visit",
         "Fine thanks is {Leutasch|Place} a good place to visit",
         "Fine thanks is {Scharnitz|Place} a good place to visit"
     ]
@@ -530,7 +529,7 @@ app.intent('AnswerYes', {
         var param = request.getSession().get("place");
         response.say("Ok i am sending a picture to your phone.").reprompt();
         var links = {
-                "Seefeld":{
+                "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
                     "bigurl" : "https://views.austria.info/uploads/image/file/3861/thumb_preview_d1c682be-fd58-4cef-b53b-798b300c8479.jpg"
                 },
@@ -568,7 +567,7 @@ app.intent('AnswerNo', {
         response.say("I am sending you anyway, if you want to take a look").reprompt();
         var param = request.getSession().get("place");
         var links = {
-                "Seefeld":{
+                "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
                     "bigurl" : "https://views.austria.info/uploads/image/file/3861/thumb_preview_d1c682be-fd58-4cef-b53b-798b300c8479.jpg"
                 },

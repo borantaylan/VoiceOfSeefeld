@@ -53,7 +53,7 @@ function parseAcomodation(file) {
 
     var addressName = file.address.name
     var street = file.address.streetAddress
-    var locality = file.address.addressLocality
+    var locality = file.address.addressLocality.toLowerCase();
     var telephone = file.address.telephone
     var fax = file.address.faxNumber
     var email = file.address.email
@@ -123,7 +123,7 @@ function parseEvent(file) {
 
     var orgName = file.location.name
     var street = file.location.address.streetAddress
-    var locality = file.location.address.addressLocality
+    var locality = file.location.address.addressLocality.toLowerCase()
     var telephone = file.location.address.telephone
     var fax = file.location.address.faxNumber
     var email = file.location.address.email
