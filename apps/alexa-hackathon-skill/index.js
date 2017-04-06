@@ -29,9 +29,9 @@ app.intent('Locality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Where can I stay in {Seefeld|AddressLocality}",
-        "Where can I stay in {Mosern|AddressLocality}",
-        "Where can I stay in {Leutasch|AddressLocality}"
+        "Where can I stay in {seefeld|AddressLocality}",
+        "Where can I stay in {mosern|AddressLocality}",
+        "Where can I stay in {leutasch|AddressLocality}"
     ]
 }, function(request, response) {
     var listOfHotelJSONs = [{
@@ -47,7 +47,6 @@ app.intent('Locality', {
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
         if(hotel['locality']===param){
-            console.log("if")
             listOfHotels.push(hotel['name']);
             filteredHotelJSONs.push(hotel);
         }
