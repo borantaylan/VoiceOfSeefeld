@@ -399,14 +399,10 @@ app.intent('EventPhoto', {
 });
 
 app.intent("numberDialog",{
-    "slots": {"inputNum": "AMAZON.LITERAL"},
+    "slots": {"inputNum": "NUMBER"},
     "utterances": [
-        "Send me the information about {Number One|inputNum}",
-        "Send me the information about {Number Two|inputNum}",
-        "Send me the information about {Number Three|inputNum}",
-        "{Number One|inputNum}",
-        "{Number Two|inputNum}",
-        "{Number Three|inputNum}",
+        "Send me the information about Number {1-3|inputNum}",
+        "Number {1-3|inputNum}",
         "{none|inputNum}",
         "{none of them|inputNum}"
     ]
@@ -414,7 +410,7 @@ app.intent("numberDialog",{
   var param = request.slot("inputNum");
   var numberedArrays = request.getSession().get("numberedArrays");
   if(numberedArrays.length>0){
-    if(param==="Number One"){
+    if(param==1){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt().shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
@@ -434,7 +430,7 @@ app.intent("numberDialog",{
             }
         }).shouldEndSession(false);
     }
-    if(param==="Number Two"){
+    if(param==2){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt('is there anything I can help?').shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
@@ -454,7 +450,7 @@ app.intent("numberDialog",{
             }
         }).shouldEndSession(false);
     }
-    if(param==="Number Three"){
+    if(param==3){
         response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.").reprompt().shouldEndSession(false);
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[2]['startDate']+ "\n It ends at "+numberedArrays[2]['endDate']
