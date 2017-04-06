@@ -8,19 +8,19 @@ var cheerio = require('cheerio');
 var moment = require('moment');
 var parser = require("./parser.js");
 
-
+var listOfHotelJSONs;
 
 app.launch(function(request, response) {
 
     //var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
-    var listOfHotelJSONs = [{
+    listOfHotelJSONs = [{
       "locality" : "Seefeld",
       "name" : "lol"
     },{
       "locality" : "Seefeld",
       "name" : "haha"
     }];
-    request.getSession().set("listOfHotels", listOfHotelJSONs);
+    //request.getSession().set("listOfHotels", listOfHotelJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
 });
@@ -44,7 +44,7 @@ app.intent('Locality', {
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
-    var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    //var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var filteredHotelJSONs = [];
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
