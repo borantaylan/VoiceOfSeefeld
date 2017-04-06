@@ -485,12 +485,12 @@ app.intent('Salut', {
         "Place": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Fine thanks by the way I want to travel to {seefeld|Place} soon",
-        "Fine thanks by the way I want to travel to {Leutasch|Place} soon",
-        "Fine thanks by the way I want to travel to {Scharnitz|Place} soon",
-        "Fine thanks by the way is {seefeld|Place} a good place to visit",
-        "Fine thanks by the way is {Leutasch|Place} a good place to visit",
-        "Fine thanks by the way is {Scharnitz|Place} a good place to visit"
+        "I am fine by the way I want to travel to {seefeld|Place} soon",
+        "I am fine by the way I want to travel to {Leutasch|Place} soon",
+        "I am fine by the way I want to travel to {Scharnitz|Place} soon",
+        "I am fine by the way is {seefeld|Place} a good place to visit",
+        "I am fine by the way is {Leutasch|Place} a good place to visit",
+        "I am fine by the way is {Scharnitz|Place} a good place to visit"
     ]
 }, function(request, response) {
     var param = request.slot("Place");
