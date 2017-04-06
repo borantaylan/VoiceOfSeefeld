@@ -3,7 +3,7 @@
   "@type": [
     "Event"
   ],
-  "name": "Winter Activities - Enchanting Snowshoe hike",
+  "name": "Winter Activities Enchanting Snowshoe hike",
   "eventStatus": "http://schema.org/EventScheduled",
   "organizer": {
     "@type": "Organization",

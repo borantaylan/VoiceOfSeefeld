@@ -3,7 +3,7 @@
   "@type": [
     "Event"
   ],
-  "name": "Village Festival of Seefeld´s associations",
+  "name": "Village Festival of Seefelds associations",
   "eventStatus": "http://schema.org/EventScheduled",
   "organizer": {
     "@type": "Organization",

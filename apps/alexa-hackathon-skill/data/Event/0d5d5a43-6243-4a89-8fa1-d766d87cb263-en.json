@@ -3,7 +3,7 @@
   "@type": [
     "Event"
   ],
-  "name": "Piano music (live)",
+  "name": "Piano music live",
   "eventStatus": "http://schema.org/EventScheduled",
   "organizer": {
     "@type": "Organization",
