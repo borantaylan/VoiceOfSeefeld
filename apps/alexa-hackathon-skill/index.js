@@ -35,10 +35,10 @@ app.intent('Locality', {
     ]
 }, function(request, response) {
     var listOfHotelJSONs = [{
-      "locality" : "Seefeld",
+      "locality" : "seefeld",
       "name" : "lol"
     },{
-      "locality" : "Seefeld",
+      "locality" : "seefeld",
       "name" : "haha"
     }];
     var param = request.slot("AddressLocality");
