@@ -46,7 +46,7 @@ app.intent('Locality', {
     var filteredHotelJSONs = [];
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['locality']===param){
+        if(hotel['locality']===param.toLower()){
             console.log("if")
             listOfHotels.push(hotel['name']);
             filteredHotelJSONs.push(hotel);
@@ -84,7 +84,7 @@ app.intent('Information', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param){
+        if(hotel['name']===param.toLower()){
             listOfHotels.push(hotel['desc']);
             listOfHotels.push(hotel['street']);
             listOfHotels.push(hotel['locality']);
@@ -122,7 +122,7 @@ app.intent('Availability', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param){
+        if(hotel['name']===param.toLower()){
             listOfHotels.push(hotel['offerNames'].length);
         }
     });
@@ -149,7 +149,7 @@ app.intent('HotelAddress', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param){
+        if(hotel['name']===param.toLower()){
             listOfHotels.push(hotel['street']);
             listOfHotels.push(hotel['locality']);
         }
@@ -186,7 +186,7 @@ app.intent('EventLocality', {
     var filteredEventJSONs = [];
     var listOfEvents = [];
     listOfEventJSONs.forEach(event => {
-        if(event['locality']===param){
+        if(event['locality']===param.toLower()){
             listOfEvents.push(event['name']);
             filteredEventJSONs.push(event);
         }
@@ -224,7 +224,7 @@ app.intent('EventInformation', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['desc']);
             listOfEvent.push(event['startDate']);
             listOfEvent.push(event['endDate']);
@@ -271,7 +271,7 @@ app.intent('StartEvent', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['startDate']);
         }
     });
@@ -301,7 +301,7 @@ app.intent('EndEvent', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['endDate']);
         }
     });
@@ -335,7 +335,7 @@ app.intent('EventLocation', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['street']);
             listOfEvent.push(event['locality']);
         }
@@ -362,7 +362,7 @@ app.intent('EventContact', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['telephone']);
         }
     });
@@ -392,7 +392,7 @@ app.intent('EventPhoto', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param){
+        if(event['name']===param.toLower()){
             listOfEvent.push(event['images']);
         }
     });
@@ -512,11 +512,11 @@ app.intent('Smalltalk', {
     },
     "utterances": [
         "How are you",
-        "Hows it going",
-        "Whats up"
+        "How's it going",
+        "What's up"
     ]
 }, function(request, response) {
-    response.say("Im fine, how are you?").reprompt();
+    response.say("I am fine, how are you?").reprompt();
 });
 
 app.intent('AnswerYes', {
