@@ -219,13 +219,13 @@ app.intent('EventInformation', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Send me the information about {Piano music (live)|Name}",
-        "Send me the information about {Village Festival of Seefeld´s associations|Name}",
-        "Send me the information about {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Send me the information about {Piano music live|Name}",
+        "Send me the information about {Village Festival of Seefelds associations|Name}",
+        "Send me the information about {Winter Activities Enchanting Snowshoe hike|Name}",
         "Send me the information about {Concert of French choir Le Diairi|Name}",
-        "Can you send me information about {Piano music (live)|Name}",
-        "Can you send me information about {Village Festival of Seefeld´s associations|Name}",
-        "Can you send me information about {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Can you send me information about {Piano music live|Name}",
+        "Can you send me information about {Village Festival of Seefelds associations|Name}",
+        "Can you send me information about {Winter Activities Enchanting Snowshoe hike|Name}",
         "Can you send me information about {Concert of French choir Le Diairi|Name}"
     ]
 }, function(request, response) {
@@ -266,14 +266,14 @@ app.intent('StartEvent', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "When is {Piano music (live)|Name}",
-        "When is {Village Festival of Seefeld´s associations|Name}",
-        "When is {Winter Activities - Enchanting Snowshoe hike|Name}",
-        "When is {Concert of French choir \"Le Diairi\"|Name}",
-        "When does {Piano music (live)|Name} start",
-        "When does {Village Festival of Seefeld´s associations|Name} start",
-        "When does {Winter Activities - Enchanting Snowshoe hike|Name} start",
-        "When does {Concert of French choir \"Le Diairi\"|Name} start"
+        "When is {Piano music live|Name}",
+        "When is {Village Festival of Seefelds associations|Name}",
+        "When is {Winter Activities Enchanting Snowshoe hike|Name}",
+        "When is {Concert of French choir Le Diairi|Name}",
+        "When does {Piano music live|Name} start",
+        "When does {Village Festival of Seefelds associations|Name} start",
+        "When does {Winter Activities Enchanting Snowshoe hike|Name} start",
+        "When does {Concert of French choir Le Diairi|Name} start"
     ]
 }, function(request, response) {
     var param = request.slot("Name");
@@ -296,14 +296,14 @@ app.intent('EndEvent', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "When is {Piano music (live)|Name} finished",
-        "When is {Village Festival of Seefeld´s associations|Name} finished",
-        "When is {Winter Activities - Enchanting Snowshoe hike|Name} finished",
-        "When is {Concert of French choir \"Le Diairi\"|Name} finished",
-        "When does {Piano music (live)|Name} end",
-        "When does {Village Festival of Seefeld´s associations|Name} end",
-        "When does {Winter Activities - Enchanting Snowshoe hike|Name} end",
-        "When does {Concert of French choir \"Le Diairi\"|Name} end"
+        "When is {Piano music live|Name} finished",
+        "When is {Village Festival of Seefelds associations|Name} finished",
+        "When is {Winter Activities Enchanting Snowshoe hike|Name} finished",
+        "When is {Concert of French choir Le Diairi|Name} finished",
+        "When does {Piano music live|Name} end",
+        "When does {Village Festival of Seefelds associations|Name} end",
+        "When does {Winter Activities Enchanting Snowshoe hike|Name} end",
+        "When does {Concert of French choir Le Diairi|Name} end"
     ]
 }, function(request, response) {
     var param = request.slot("Name");
@@ -326,18 +326,18 @@ app.intent('EventLocation', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Where is {Piano music (live)|Name} located",
-        "Where is {Village Festival of Seefeld´s associations|Name} located",
-        "Where is {Winter Activities - Enchanting Snowshoe hike|Name} located",
-        "Where is {Concert of French choir \"Le Diairi\"|Name} located",
-        "Where is {Piano music (live)|Name}",
-        "Where is {Village Festival of Seefeld´s associations|Name}",
-        "Where is {Winter Activities - Enchanting Snowshoe hike|Name}",
-        "Where is {Concert of French choir \"Le Diairi\"|Name}",
-        "What is the address of {Piano music (live)|Name}",
-        "What is the address of {Village Festival of Seefeld´s associations|Name}",
-        "What is the address of {Winter Activities - Enchanting Snowshoe hike|Name}",
-        "What is the address of {Concert of French choir \"Le Diairi\"|Name}"
+        "Where is {Piano music live|Name} located",
+        "Where is {Village Festival of Seefelds associations|Name} located",
+        "Where is {Winter Activities Enchanting Snowshoe hike|Name} located",
+        "Where is {Concert of French choir Le Diairi|Name} located",
+        "Where is {Piano music live|Name}",
+        "Where is {Village Festival of Seefelds associations|Name}",
+        "Where is {Winter Activities Enchanting Snowshoe hike|Name}",
+        "Where is {Concert of French choir Le Diairi|Name}",
+        "What is the address of {Piano music live|Name}",
+        "What is the address of {Village Festival of Seefelds associations|Name}",
+        "What is the address of {Winter Activities Enchanting Snowshoe hike|Name}",
+        "What is the address of {Concert of French choir Le Diairi|Name}"
     ]
 }, function(request, response) {
     var param = request.slot("Name");
@@ -361,10 +361,10 @@ app.intent('EventContact', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Tell me the contact of {Piano music (live)|Name}",
-        "Tell me the contact of {Village Festival of Seefeld´s associations|Name}",
-        "Tell me the contact of {Winter Activities - Enchanting Snowshoe hike|Name}",
-        "Tell me the contact of {Concert of French choir \"Le Diairi\"|Name}"
+        "Tell me the contact of {Piano music live|Name}",
+        "Tell me the contact of {Village Festival of Seefelds associations|Name}",
+        "Tell me the contact of {Winter Activities Enchanting Snowshoe hike|Name}",
+        "Tell me the contact of {Concert of French choir Le Diairi|Name}"
     ]
 }, function(request, response) {
     var param = request.slot("Name");
@@ -391,10 +391,10 @@ app.intent('EventPhoto', {
         "Name": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Send me a image of {Piano music (live)|Name}",
-        "Send me a image of {Village Festival of Seefeld´s associations|Name}",
-        "Send me a image of {Winter Activities - Enchanting Snowshoe hike|Name}",
-        "Send me a image of {Concert of French choir \"Le Diairi\"|Name}"
+        "Send me a image of {Piano music live|Name}",
+        "Send me a image of {Village Festival of Seefelds associations|Name}",
+        "Send me a image of {Winter Activities Enchanting Snowshoe hike|Name}",
+        "Send me a image of {Concert of French choir Le Diairi|Name}"
     ]
 }, function(request, response) {
     var param = request.slot("Name");
