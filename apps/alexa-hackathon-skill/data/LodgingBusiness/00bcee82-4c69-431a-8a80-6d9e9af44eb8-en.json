@@ -1,11 +1,11 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "LodgingBusiness"
   ],
   "url": [
-    "http://www.haus-tiefenbrunner.com",
-    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+    "https://www.haus-tiefenbrunner.com",
+    "https://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -17,7 +17,7 @@
     "telephone": "(0043) 5214 6967",
     "faxNumber": "(0043) 5214 6967",
     "email": "haus-tiefenbrunner@gmx.at",
-    "url": "http://www.haus-tiefenbrunner.com"
+    "url": "https://www.haus-tiefenbrunner.com"
   },
   "name": "Haus Tiefenbrunner",
   "description": [
@@ -28,22 +28,22 @@
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/3b95c72d-2546-4f88-bbd3-3b7e1d4eed26/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/3b95c72d-2546-4f88-bbd3-3b7e1d4eed26/99/image.jpg",
       "caption": "Sommer"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/72b85121-44f7-41be-9aae-560fee7ff993/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/72b85121-44f7-41be-9aae-560fee7ff993/99/image.jpg",
       "caption": "Winter"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/696926d0-0219-45ec-82ec-9ad1caceaba8/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/696926d0-0219-45ec-82ec-9ad1caceaba8/99/image.jpg",
       "caption": "Garten"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/438f34aa-2f62-42f1-83a9-2990c0aec2c6/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/438f34aa-2f62-42f1-83a9-2990c0aec2c6/99/image.jpg",
       "caption": "Liegewiese"
     }
   ],
@@ -58,7 +58,7 @@
       "@type": "Offer",
       "name": "Apartment with shower, toilet and 1 bed room.",
       "description": "A 2 room apartment (deer) in the 55m² for the second floor, 2-5 persons. Equipped comfortably equipped with shower / WC, 1 bedroom, living room with kitchen (microwave, dishes, etc.) and sleeping facilities, a cloakroom. Also satellite TV, radio, bath-hand dish towels and bedclothes are available. South-facing balcony with stunning panoramic views.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -79,7 +79,7 @@
       "@type": "Offer",
       "name": "Apartment, shower, toilet, 1 bed room",
       "description": "A 2 room apartment (rabbit) in the first floor 53m² for 2-4 persons. Equipped comfortably equipped with shower, separate WC, 1 bedroom, living room with sleeping facilities, kitchen (Microwave, dishes, etc.), wardrobe. Also satellite TV, radio, bath-hand dish towels and bedclothes are available. East and south-facing terrace, with magnificent panoramic view.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -100,7 +100,7 @@
       "@type": "Offer",
       "name": "Apartment, shower, toilet, 1 bed room",
       "description": "A 2 room apartment (Fox) in the slightly sunken floor 45m² for 2-4 persons. Equipped comfortably equipped with shower / WC, 1 bedroom, living room with sleeping accommodation, kitchen (microwave, dishes, etc.) wardrobe. This apartment is also very bright and with a clear view outside. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. East and south-facing terrace, with magnificent panoramic view.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -121,7 +121,7 @@
       "@type": "Offer",
       "name": "Apartment, shower and bath, toilet, 3 bed rooms",
       "description": "A 4 room apartment (squirrel) in the second floor 65m² for 4-8 persons. \nEquipped with very comfortable en-suite bathroom (bath, shower, \nDouble washbasin and toilet), \n2 bedrooms, 1 nursery, living room with kitchen (microwave, dishes, etc.) and sleeping facilities, a cloakroom. \nAlso satellite TV, radio, bath-hand dish towels and bedclothes are available. \nSouth and east, with a magnificent panoramic view.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
