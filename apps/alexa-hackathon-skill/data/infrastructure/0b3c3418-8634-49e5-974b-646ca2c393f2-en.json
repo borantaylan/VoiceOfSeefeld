@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "LocalBusiness"
   ],
@@ -18,27 +18,27 @@
     "addressCountry": "AT",
     "telephone": "+4352123220",
     "email": "info@seefeld-sports.at",
-    "url": "http://www.seefeld-sports.at"
+    "url": "https://www.seefeld-sports.at"
   },
   "description": "fully technically equipped congress halls (capacity 15 -300 people), additional cinema hall (148 people) and restaurant, 210 parking spaces, underground car park; Main building at the foot of the Toni Seelos ski jump (140 people), 100 parking spaces (outside) WM Hall (1,200 - 2,500 people) tel.: 05212 3220, parking available ",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/2bde71dc-00aa-4848-9730-3e9a4b416cfa/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/2bde71dc-00aa-4848-9730-3e9a4b416cfa/99/image.jpg",
       "caption": "Kongressraum"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/f7990af3-db77-4405-b6c1-3dda134fb86e/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/f7990af3-db77-4405-b6c1-3dda134fb86e/99/image.jpg",
       "caption": "Olympia Sport- \u0026 Kongresszentrum"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/317269d5-45ea-456f-bf9c-9aa82618ecde/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/317269d5-45ea-456f-bf9c-9aa82618ecde/99/image.jpg",
       "caption": "Olympia Sport \u0026 Kongresszentrum"
     }
   ],
   "url": [
-    "http://www.seefeld-sports.at"
+    "https://www.seefeld-sports.at"
   ]
 }

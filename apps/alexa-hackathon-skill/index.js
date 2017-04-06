@@ -47,7 +47,6 @@ app.intent('Locality', {
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
         if(hotel['locality'].toLowerCase()===param.toLowerCase()){
-            console.log("W")
             listOfHotels.push(hotel['name']);
             filteredHotelJSONs.push(hotel);
         }
@@ -186,7 +185,7 @@ app.intent('EventLocality', {
     var filteredEventJSONs = [];
     var listOfEvents = [];
     listOfEventJSONs.forEach(event => {
-        if(event['locality']===param.toLowerCase()){
+        if(event['locality'].toLowerCase()===param.toLowerCase()){
             listOfEvents.push(event['name']);
             filteredEventJSONs.push(event);
         }
@@ -224,7 +223,7 @@ app.intent('EventInformation', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['desc']);
             listOfEvent.push(event['startDate']);
             listOfEvent.push(event['endDate']);
@@ -271,7 +270,7 @@ app.intent('StartEvent', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['startDate']);
         }
     });
@@ -301,7 +300,7 @@ app.intent('EndEvent', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['endDate']);
         }
     });
@@ -335,7 +334,7 @@ app.intent('EventLocation', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['street']);
             listOfEvent.push(event['locality']);
         }
@@ -362,7 +361,7 @@ app.intent('EventContact', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['telephone']);
         }
     });
@@ -392,7 +391,7 @@ app.intent('EventPhoto', {
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var listOfEvent = [];
     listOfEventJSONs.forEach(event => {
-        if(event['name']===param.toLowerCase()){
+        if(event['name'].toLowerCase()===param.toLowerCase()){
             listOfEvent.push(event['images']);
         }
     });

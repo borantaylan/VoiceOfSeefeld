@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "TouristInformationCenter"
   ],
@@ -19,17 +19,17 @@
     "telephone": "+43-50880510",
     "faxNumber": "+43-50880811",
     "email": "info.leutasch@seefeld.com",
-    "url": "http://www.seefeld.com"
+    "url": "https://www.seefeld.com"
   },
   "description": "Leutasch - is good for me Opening times: until 14th of May: Monday-Friday: 9.00 am - 5.00 pm Exception: 15th of April: 9.00 am - 12.00 noon 16th of April: 10.00 am - 12.00 noon 15th of May until 05th of June: Monday-Friday: 9.00 am - 5.00 pm Saturday: 9.00 am - 12.00 noon 25th of May, 4th and 5th of June: 10.00 am - 12.00 noon off 6th of June: Monday-Friday: 9.00 am - 6.00 pm Saturday: 9.00 am - 12.00 noon (5th 0026 12th of August also from 2.00 pm - 5.00 pm) Sundays 0026 Holidays:(15th of June and from 2nd of July between 17th of September: 10 am - 12.00 noon and on 6th, 13th 0026 15th of August also from 2.00 pm - 5.00 pm)",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/7cf80669-d2e8-4dbf-8f07-eb6261dd0eaa/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/7cf80669-d2e8-4dbf-8f07-eb6261dd0eaa/99/image.jpg",
       "caption": "Logo"
     }
   ],
   "url": [
-    "http://www.seefeld.com"
+    "https://www.seefeld.com"
   ]
 }

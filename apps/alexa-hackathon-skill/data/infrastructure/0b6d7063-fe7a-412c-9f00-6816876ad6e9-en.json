@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "BeautySalon"
   ],
@@ -19,17 +19,17 @@
     "telephone": "+4352122621",
     "faxNumber": "+4352123885",
     "email": "info@klosterbraeu.com",
-    "url": "http://www.klosterbraeu.com"
+    "url": "https://www.klosterbraeu.com"
   },
   "description": "Massages, sauna, steam bath, infra-red cabin, cosmetic and body treatments, fitness room, private spa 0027s. Full use of the spa facilities and swimming pool by booking an wellnesstreatment for at least € 70,-.",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/934f3b08-c265-41d6-894a-774a617e1708/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/934f3b08-c265-41d6-894a-774a617e1708/99/image.jpg",
       "caption": "Klosterbräu"
     }
   ],
   "url": [
-    "http://www.klosterbraeu.com"
+    "https://www.klosterbraeu.com"
   ]
 }

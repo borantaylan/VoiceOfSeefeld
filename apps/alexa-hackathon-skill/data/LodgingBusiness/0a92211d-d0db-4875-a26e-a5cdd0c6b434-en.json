@@ -1,12 +1,12 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "Hotel",
     "BedAndBreakfast"
   ],
   "url": [
-    "http://www.kroesbacherhof.at",
-    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+    "https://www.kroesbacherhof.at",
+    "https://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -18,7 +18,7 @@
     "telephone": "+436504753001",
     "faxNumber": "+4352124886",
     "email": "info@kroesbacherhof.at",
-    "url": "http://www.kroesbacherhof.at"
+    "url": "https://www.kroesbacherhof.at"
   },
   "name": "Pension Krösbacherhof",
   "description": [
@@ -33,52 +33,52 @@
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/09065c11-39d5-4e36-a1cc-17732f7405ab/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/09065c11-39d5-4e36-a1cc-17732f7405ab/99/image.jpg",
       "caption": "Winter"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/de3f2df4-b6a4-4914-97c1-8f503651c2f7/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/de3f2df4-b6a4-4914-97c1-8f503651c2f7/99/image.jpg",
       "caption": "Sommer"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/245cf7b4-4624-46f0-9b38-c65a9e2518f6/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/245cf7b4-4624-46f0-9b38-c65a9e2518f6/99/image.jpg",
       "caption": "Frühstücksraum"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/0a148f99-7415-4fed-9b76-aca4b8927185/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/0a148f99-7415-4fed-9b76-aca4b8927185/99/image.jpg",
       "caption": "Sauna"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/ff4e0278-e972-4bee-84ce-b766d7649278/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/ff4e0278-e972-4bee-84ce-b766d7649278/99/image.jpg",
       "caption": "Aussenpool"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/a558c611-d0ce-4f31-9c94-3fab56dc315d/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/a558c611-d0ce-4f31-9c94-3fab56dc315d/99/image.jpg",
       "caption": "Pool 1"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/93c1e734-5f0e-4ca5-9904-94fa159d5a78/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/93c1e734-5f0e-4ca5-9904-94fa159d5a78/99/image.jpg",
       "caption": "Sauna 1"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/79489484-1f97-4a5f-aaca-8507f1d0e690/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/79489484-1f97-4a5f-aaca-8507f1d0e690/99/image.jpg",
       "caption": "Aufenthaltsraum"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/e260589a-2e4e-4cfb-94df-f6531ea39f47/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/e260589a-2e4e-4cfb-94df-f6531ea39f47/99/image.jpg",
       "caption": "Aufenthaltsraum 1"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/4b69ac97-9d97-43ee-8c42-41d2df9aefeb/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/4b69ac97-9d97-43ee-8c42-41d2df9aefeb/99/image.jpg",
       "caption": "Bar"
     }
   ],
@@ -92,7 +92,7 @@
     {
       "@type": "Offer",
       "name": "Double room with shower and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -131,7 +131,7 @@
     {
       "@type": "Offer",
       "name": "Junior suite with a bath tub and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -170,7 +170,7 @@
     {
       "@type": "Offer",
       "name": "Economy double room with shower and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -209,7 +209,7 @@
     {
       "@type": "Offer",
       "name": "Double room which is facing to the mountains with a bath tub and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -248,7 +248,7 @@
     {
       "@type": "Offer",
       "name": "Modern double room with a shower and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -294,7 +294,7 @@
     {
       "@type": "Offer",
       "name": "Family room in the south with a shower and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [
@@ -333,7 +333,7 @@
     {
       "@type": "Offer",
       "name": "Superior junior suite with a shower and a toilet.",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [

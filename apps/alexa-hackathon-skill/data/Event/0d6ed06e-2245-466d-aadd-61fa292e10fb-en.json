@@ -1,10 +1,10 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "Event"
   ],
   "name": "Concert of French choir Le Diairi",
-  "eventStatus": "http://schema.org/EventScheduled",
+  "eventStatus": "https://schema.org/EventScheduled",
   "organizer": {
     "@type": "Organization",
     "name": "Informationsbüro Seefeld",
@@ -16,7 +16,7 @@
       "addressCountry": "AT",
       "telephone": "+43508800",
       "email": "region@seefeld.com",
-      "url": "http://www.seefeld.com"
+      "url": "https://www.seefeld.com"
     }
   },
   "location": {
@@ -30,19 +30,19 @@
       "addressCountry": "AT",
       "telephone": "+43508800",
       "email": "region@seefeld.com",
-      "url": "http://www.seefeld.com"
+      "url": "https://www.seefeld.com"
     }
   },
   "description": "The choir from Montbéliard (an Eastern France town with approx. 26.000 inhabitants) consists of approx. 35-40 members who wear the traditional dress of the area. The four-part mixed choir performs folk songs from France and other countries, it sings also classic pieces and modern melodies. The choir stages 15 to 20 concerts every year. Free entrance!",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/e0c03b62-6bf1-464a-8ab0-07b2b18eafbb/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/e0c03b62-6bf1-464a-8ab0-07b2b18eafbb/99/image.jpg",
       "caption": "Le Diairi"
     }
   ],
   "url": [
-    "http://www.lediairi.com"
+    "https://www.lediairi.com"
   ],
   "startDate": "2017-07-30T17:00:00",
   "endDate": "2017-07-30"

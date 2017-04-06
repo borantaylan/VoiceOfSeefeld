@@ -1,11 +1,11 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "LodgingBusiness"
   ],
   "url": [
-    "http://web.deskline.net/seefeld/de/show_accommodation/SEE/0a2afaa0-7906-4732-866e-689feed903a6/haus_riedl",
-    "http://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
+    "https://web.deskline.net/seefeld/de/show_accommodation/SEE/0a2afaa0-7906-4732-866e-689feed903a6/haus_riedl",
+    "https://upload.seefeld.com/intranet/Deskline/AGBH2006.pdf"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -28,12 +28,12 @@
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/7e844de4-e517-423b-8832-ee27d120e1e4/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/7e844de4-e517-423b-8832-ee27d120e1e4/99/image.jpg",
       "caption": "Sommer"
     },
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/a4cfd53a-ffbc-4f10-8075-4ac38fd055f4/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/a4cfd53a-ffbc-4f10-8075-4ac38fd055f4/99/image.jpg",
       "caption": "Winter"
     }
   ],
@@ -51,7 +51,7 @@
     {
       "@type": "Offer",
       "name": "Apartment, bath, toilet, 2 bed rooms",
-      "availability": "http://schema.org/InStock",
+      "availability": "https://schema.org/InStock",
       "itemOffered": [
         {
           "@type": [

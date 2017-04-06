@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "Store"
   ],
@@ -19,17 +19,17 @@
     "telephone": "(0043) 5214 6424",
     "faxNumber": "(0043) 5214 6424",
     "email": "hausseeblick@aon.at",
-    "url": "http://www.hausseeblick.net"
+    "url": "https://www.hausseeblick.net"
   },
   "description": "Weidach 296, Tel. 0026 Fax. 05214-6424, www.hausseeblick.net, holzherz@aon.at",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/7333476f-cc63-4701-98a2-a37625af1137/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/7333476f-cc63-4701-98a2-a37625af1137/99/image.jpg",
       "caption": "Holz [und] schenken mit Herz"
     }
   ],
   "url": [
-    "http://www.hausseeblick.net"
+    "https://www.hausseeblick.net"
   ]
 }

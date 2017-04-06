@@ -53,7 +53,7 @@ function parseAcomodation(file) {
 
     var addressName = file.address.name
     var street = file.address.streetAddress
-    var locality = file.address.addressLocality.toLowerCase();
+    var locality = file.address.addressLocality
     var telephone = file.address.telephone
     var fax = file.address.faxNumber
     var email = file.address.email
@@ -81,7 +81,7 @@ function parseAcomodation(file) {
 }
 
 function parseInfra(file) {
-    var name = file.name.toLowerCase();
+    var name = file.name
     var urls = file.url
     var desc = file.description
 
@@ -111,7 +111,7 @@ function parseInfra(file) {
 
 function parseEvent(file) {
 
-    var name = file.name.toLowerCase();
+    var name = file.name
     var urls = file.url
     var desc = file.description
 
@@ -123,7 +123,7 @@ function parseEvent(file) {
 
     var orgName = file.location.name
     var street = file.location.address.streetAddress
-    var locality = file.location.address.addressLocality.toLowerCase()
+    var locality = file.location.address.addressLocality
     var telephone = file.location.address.telephone
     var fax = file.location.address.faxNumber
     var email = file.location.address.email

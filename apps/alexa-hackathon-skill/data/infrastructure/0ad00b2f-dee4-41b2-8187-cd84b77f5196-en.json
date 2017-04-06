@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": [
     "FastFoodRestaurant"
   ],
@@ -18,17 +18,17 @@
     "addressCountry": "AT",
     "telephone": "(0043) (0)5212/20567",
     "email": "peter.eigentler@troppacher.at",
-    "url": "http://www.troppacher.at"
+    "url": "https://www.troppacher.at"
   },
   "description": "at the Avia petrol station.",
   "image": [
     {
       "@type": "ImageObject",
-      "url": "http://resc.deskline.net/images/SEE/1/2b6fd9fd-773a-4417-951d-cfd7ee1e9b6d/99/image.jpg",
+      "url": "https://resc.deskline.net/images/SEE/1/2b6fd9fd-773a-4417-951d-cfd7ee1e9b6d/99/image.jpg",
       "caption": "BP"
     }
   ],
   "url": [
-    "http://www.avia.at"
+    "https://www.avia.at"
   ]
 }
