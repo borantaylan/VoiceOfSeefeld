@@ -593,4 +593,10 @@ app.intent('AnswerNo', {
     }
 });
 
+app.intent('AMAZON.StopIntent', {
+    "slots": {}
+}, function(request, response) {
+    response.say("Good bye. See you soon!").shouldEndSession(true);
+    });
+
 module.exports = app;
