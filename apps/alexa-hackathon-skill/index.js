@@ -520,7 +520,7 @@ app.intent('AnswerYes', {
 }, function(request, response) {
     if(request.getSession().get("decision") === true){
         var param = request.getSession().get("place").toLowerCase();
-        response.say("Ok i am sending a picture to your phone with related link.").reprompt("Can I help you with anything else?").shouldEndSession(false);
+        response.say("Ok i am sending a picture to your phone with related link.").reprompt("Can I help you with anything else?");
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -543,7 +543,7 @@ app.intent('AnswerYes', {
                 smallImageUrl: links[param]['smallurl'], // required
                 largeImageUrl: links[param]['bigurl']
             }
-        }).shouldEndSession(false);
+        }).shouldEndSession(true);
         request.getSession().clear("decision");
     }
 }
@@ -558,7 +558,7 @@ app.intent('AnswerNo', {
 }, function(request, response) {
     if(request.getSession().get('decision')===true){
         var param = request.getSession().get("place").toLowerCase();
-        response.say("I am sending you anyway, if you want to take a look").reprompt("Don't you like "+param+"?").shouldEndSession(false);
+        response.say("I am sending you anyway, if you want to take a look").reprompt("Don't you like "+param+"?");
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -581,7 +581,7 @@ app.intent('AnswerNo', {
                 smallImageUrl: links[param]['smallurl'], // required
                 largeImageUrl: links[param]['bigurl']
             }
-        }).shouldEndSession(false);
+        }).shouldEndSession(true);
         request.getSession().clear("decision");
     }
 });
