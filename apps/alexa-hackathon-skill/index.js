@@ -63,7 +63,7 @@ app.intent('Locality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "hotel");
-    response.say(result.substring(0, result.length - 2)).reprompt();
+    response.say(result.substring(0, result.length - 2)).reprompt().shouldEndSession(false);
 });
 
 app.intent('Information', {
@@ -92,7 +92,7 @@ app.intent('Information', {
             listOfHotels.push(hotel['images']);
         }
     });
-    response.say("I will send you the information about "+param+" on your phone.");
+    response.say("I will send you the information about "+param+" on your phone.").shouldEndSession(false);
     response.card({
         type: "Standard",
         title: "Informations about "+param, // this is not required for type Simple or Standard
@@ -101,7 +101,7 @@ app.intent('Information', {
             smallImageUrl: listOfHotels[5][0], // required
             largeImageUrl: listOfHotels[5][0]
         }
-    });
+    }).shouldEndSession(false);
 });
 
 app.intent('Availability', {
@@ -125,7 +125,7 @@ app.intent('Availability', {
             listOfHotels.push(hotel['offerNames'].length);
         }
     });
-    response.say("There are " + listOfHotels[0] + " rooms available.").reprompt();
+    response.say("There are " + listOfHotels[0] + " rooms available.").reprompt().shouldEndSession(false);
 });
 
 app.intent('HotelAddress', {
@@ -153,7 +153,7 @@ app.intent('HotelAddress', {
             listOfHotels.push(hotel['locality']);
         }
     });
-    response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]).reprompt();
+    response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]).reprompt().shouldEndSession(false);
 });
 
 app.intent('Booking', {
@@ -164,11 +164,11 @@ app.intent('Booking', {
         "Can you do a reservation for me"
     ]
 }, function(request, response) {
-    response.say("Sorry, i can not do that, but I will send you the number.");
+    response.say("Sorry, i can not do that, but I will send you the number.").shouldEndSession(false);
     response.card({
         type: "Simple",
         content: "Telephone number of the hotel: +436504753001"
-    });
+    }).shouldEndSession(false);
 });
 
 app.intent('EventLocality', {
@@ -201,7 +201,7 @@ app.intent('EventLocality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "event");
-    response.say(result.substring(0, result.length - 2)).reprompt();
+    response.say(result.substring(0, result.length - 2)).reprompt().shouldEndSession(false);
 });
 
 app.intent('EventInformation', {
@@ -236,7 +236,7 @@ app.intent('EventInformation', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say("I will send you the information about " + param + " on your phone.").reprompt();
+        response.say("I will send you the information about " + param + " on your phone.").reprompt().shouldEndSession(false);
         response.card({
             type: "Standard",
             title: "Informations about "+param, // this is not required for type Simple or Standard
@@ -245,9 +245,9 @@ app.intent('EventInformation', {
                 smallImageUrl: listOfEvent[8][0], // required
                 largeImageUrl: listOfEvent[8][0]
             }
-        });
+        }).shouldEndSession(false);
     }else{
-        response.say("Unfortunately, there are no details for this event.").reprompt()
+        response.say("Unfortunately, there are no details for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -275,9 +275,9 @@ app.intent('StartEvent', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " starts " + listOfEvent[0]).reprompt();
+        response.say(param + " starts " + listOfEvent[0]).reprompt().shouldEndSession(false);
     }else{
-        response.say("Unfortunately, there is no start date available for this event.").reprompt();
+        response.say("Unfortunately, there is no start date available for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -305,9 +305,9 @@ app.intent('EndEvent', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " ends " + listOfEvent[0]).reprompt();
+        response.say(param + " ends " + listOfEvent[0]).reprompt().shouldEndSession(false);
     }else{
-        response.say("Unfortunately, there is no end date available for this event.").reprompt();
+        response.say("Unfortunately, there is no end date available for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -340,9 +340,9 @@ app.intent('EventLocation', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " is located in " + listOfEvent[1] + " in " + listOfEvent[0]).reprompt();
+        response.say(param + " is located in " + listOfEvent[1] + " in " + listOfEvent[0]).reprompt().shouldEndSession(false);
     }else{
-        response.say("Unfortunately, there is location data available for this event.").reprompt();
+        response.say("Unfortunately, there is location data available for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -366,13 +366,13 @@ app.intent('EventContact', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say("I will send you the telephone number on your phone").reprompt();
+        response.say("I will send you the telephone number on your phone").reprompt().shouldEndSession(false);
             response.card({
         type: "Simple",
         content: "Telephone number of the hotel: "+listOfEvent[0]
     });
     }else{
-        response.say("Unfortunately, there is telephone number available for this event.").reprompt();
+        response.say("Unfortunately, there is telephone number available for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -397,7 +397,7 @@ app.intent('EventPhoto', {
     });
     if(listOfEvent.length > 0){
         if(listOfEvent[0]){
-        response.say("I will send you the photos on your phone").reprompt();
+        response.say("I will send you the photos on your phone").reprompt().shouldEndSession(false);
         response.card({
             type: "Standard",
             title: "Photos from "+param, // this is not required for type Simple or Standard
@@ -406,10 +406,10 @@ app.intent('EventPhoto', {
                 smallImageUrl: listOfEvent[0][0], // required
                 largeImageUrl: listOfEvent[0][0]
             }
-        });
+        }).shouldEndSession(false);
         }
     }else{
-        response.say("Unfortunately, there are no photos available for this event.").reprompt();
+        response.say("Unfortunately, there are no photos available for this event.").reprompt().shouldEndSession(false);
     }
 });
 
@@ -425,7 +425,7 @@ app.intent("numberDialog",{
   var numberedArrays = request.getSession().get("numberedArrays");
   if(numberedArrays.length>0){
     if(param==="Number One"){
-        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt();
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt().shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[0]['startDate']+ "\n It ends at "+numberedArrays[0]['endDate']
@@ -442,10 +442,10 @@ app.intent("numberDialog",{
                 smallImageUrl: numberedArrays[0]['images'][0], // required
                 largeImageUrl: numberedArrays[0]['images'][0]
             }
-        });
+        }).shouldEndSession(false);
     }
     if(param==="Number Two"){
-        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt();
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt().shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[1]['startDate']+ "\n It ends at "+numberedArrays[1]['endDate']
@@ -462,10 +462,10 @@ app.intent("numberDialog",{
                 smallImageUrl: numberedArrays[1]['images'][0], // required
                 largeImageUrl: numberedArrays[1]['images'][0]
             }
-        });
+        }).shouldEndSession(false);
     }
     if(param==="Number Three"){
-        response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.").reprompt();
+        response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.").reprompt().shouldEndSession(false);
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[2]['startDate']+ "\n It ends at "+numberedArrays[2]['endDate']
         }
@@ -481,10 +481,10 @@ app.intent("numberDialog",{
                 smallImageUrl: numberedArrays[2]['images'][0], // required
                 largeImageUrl: numberedArrays[2]['images'][0]
             }
-        });
+        }).shouldEndSession(false);
     }
   }
-  else response.say("You're now on vacation.").reprompt();
+  else response.say("You're now on vacation.").reprompt().shouldEndSession(false);
 });
 
 app.intent('Salut', {
@@ -501,7 +501,7 @@ app.intent('Salut', {
     ]
 }, function(request, response) {
     var param = request.slot("Place");
-    response.say(param + " is a really cool place. Do you want me to send you some pictures?").reprompt();
+    response.say(param + " is a really cool place. Do you want me to send you some pictures?").reprompt().shouldEndSession(false);
     request.getSession().set("decision",true);
     request.getSession().set("place",param);
 });
@@ -515,7 +515,7 @@ app.intent('Smalltalk', {
         "What's up"
     ]
 }, function(request, response) {
-    response.say("I am fine, how are you?").reprompt();
+    response.say("I am fine, how are you?").reprompt().shouldEndSession(false);
 });
 
 app.intent('AnswerYes', {
@@ -526,8 +526,8 @@ app.intent('AnswerYes', {
     ]
 }, function(request, response) {
     if(request.getSession().get("decision") === true){
-        var param = request.getSession().get("place");
-        response.say("Ok i am sending a picture to your phone.").reprompt();
+        var param = request.getSession().get("place").toLowerCase();
+        response.say("Ok i am sending a picture to your phone.").reprompt().shouldEndSession(false);
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -550,7 +550,7 @@ app.intent('AnswerYes', {
                 smallImageUrl: links[param]['smallurl'], // required
                 largeImageUrl: links[param]['bigurl']
             }
-        });
+        }).shouldEndSession(false);
         request.getSession().clear("decision");
     }
 }
@@ -564,8 +564,8 @@ app.intent('AnswerNo', {
     ]
 }, function(request, response) {
     if(request.getSession().get('decision')===true){
-        response.say("I am sending you anyway, if you want to take a look").reprompt();
-        var param = request.getSession().get("place");
+        response.say("I am sending you anyway, if you want to take a look").reprompt().shouldEndSession(false);
+        var param = request.getSession().get("place").toLowerCase();
         var links = {
                 "seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -588,7 +588,7 @@ app.intent('AnswerNo', {
                 smallImageUrl: links[param]['smallurl'], // required
                 largeImageUrl: links[param]['bigurl']
             }
-        });
+        }).shouldEndSession(false);
         request.getSession().clear("decision");
     }
 });
