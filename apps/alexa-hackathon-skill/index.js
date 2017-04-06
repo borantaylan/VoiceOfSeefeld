@@ -493,18 +493,30 @@ app.intent('Salut', {
         "Place": "AMAZON.LITERAL"
     },
     "utterances": [
-        "I want to travel to {Seefeld|Place} soon",
-        "I want to travel to {Leutasch|Place} soon",
-        "I want to travel to {Scharnitz|Place} soon",
-        "Is {Seefeld|Place} a good place to visit",
-        "Is {Leutasch|Place} a good place to visit",
-        "Is {Scharnitz|Place} a good place to visit"
+        "Fine thanks I want to travel to {Seefeld|Place} soon",
+        "Fine thanks I want to travel to {Leutasch|Place} soon",
+        "Fine thanks I want to travel to {Scharnitz|Place} soon",
+        "Fine thanks is {Seefeld|Place} a good place to visit",
+        "Fine thanks is {Leutasch|Place} a good place to visit",
+        "Fine thanks is {Scharnitz|Place} a good place to visit"
     ]
 }, function(request, response) {
     var param = request.slot("Place");
-    response.say(param + " is a really cool place. Should I send you pictures?").reprompt();
+    response.say(param + " is a really cool place. Do you want me to send you some pictures?").reprompt();
     request.getSession().set("decision",true);
     request.getSession().set("place",param);
+});
+
+app.intent('Smalltalk', {
+    "slots": {
+    },
+    "utterances": [
+        "How are you",
+        "Hows it going",
+        "Whats up"
+    ]
+}, function(request, response) {
+    response.say("Im fine, how are you?").reprompt();
 });
 
 app.intent('AnswerYes', {
