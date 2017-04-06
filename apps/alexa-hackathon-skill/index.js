@@ -46,7 +46,8 @@ app.intent('Locality', {
     var filteredHotelJSONs = [];
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['locality']===param.toLowerCase()){
+        if(hotel['locality'].toLowerCase()===param.toLowerCase()){
+            console.log("W")
             listOfHotels.push(hotel['name']);
             filteredHotelJSONs.push(hotel);
         }
@@ -83,7 +84,7 @@ app.intent('Information', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param.toLowerCase()){
+        if(hotel['name'].toLowerCase()===param.toLowerCase()){
             listOfHotels.push(hotel['desc']);
             listOfHotels.push(hotel['street']);
             listOfHotels.push(hotel['locality']);
@@ -121,7 +122,7 @@ app.intent('Availability', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param.toLowerCase()){
+        if(hotel['name'].toLowerCase()===param.toLowerCase()){
             listOfHotels.push(hotel['offerNames'].length);
         }
     });
@@ -148,7 +149,7 @@ app.intent('HotelAddress', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        if(hotel['name']===param.toLowerCase()){
+        if(hotel['name'].toLowerCase()===param.toLowerCase()){
             listOfHotels.push(hotel['street']);
             listOfHotels.push(hotel['locality']);
         }
