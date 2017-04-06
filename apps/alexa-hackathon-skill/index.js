@@ -56,12 +56,13 @@ app.intent('Locality', {
     var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: ";
     var numberedArrays = [];
     for (var i = 0; i < listOfHotels.length; i++) {
-        var temp = {};
-        temp[i + 1] = filteredHotelJSONs[i];
-        numberedArrays.push(temp);
+        //var temp = {};
+        //temp[i + 1] = filteredHotelJSONs[i];
+        numberedArrays.push(filteredHotelJSONs[i]);
         result = result + "<p>Number " + (i + 1) + ": " + listOfHotels[i] + "</p>, ";
     }
     request.getSession().set("numberedArrays", numberedArrays);
+    request.getSession().set("state", "hotel");
     response.say(result.substring(0, result.length - 2));
 });
 
@@ -181,21 +182,26 @@ app.intent('EventLocality', {
 }, function(request, response) {
     var param = request.slot("Locality");
     var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var filteredEventJSONs = [];
     var listOfEvents = [];
     listOfEventJSONs.forEach(event => {
         if(event['locality']===param){
             listOfEvents.push(event['name']);
+            filteredEventJSONs.push(event);
         }
     });
 
     //TODO use param to retrieve hotel lists
     var result = "There are " + listOfEvents.length + " events in " + param + ": ";
+    var numberedArrays = [];
 
     for (var i = 0; i < listOfEvents.length; i++) {
         result = result + "<p>Number " + (i + 1) + ": " + listOfEvents[i] + "</p>, ";
+        numberedArrays.push(filteredEventJSONs[i]);
     }
+    request.getSession().set("numberedArrays", numberedArrays);
+    request.getSession().set("state", "event");
     response.say(result.substring(0, result.length - 2));
-
 });
 
 app.intent('EventInformation', {
@@ -418,10 +424,56 @@ app.intent("numberDialog",{
   var param = request.slot("inputNum");
   var numberedArrays = request.getSession().get("numberedArrays");
   if(numberedArrays.length>0){
-    if(param==="Number One"){response.say("1");}
-    if(param==="Number Two"){response.say("2");}
-    if(param==="Number Three"){response.say("3");}
+    if(param==="Number One"){
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        response.card({
+            type: "Standard",
+            title: "Informations about "+numberedArrays[0]['name'], // this is not required for type Simple or Standard
+            text: "Description: "+numberedArrays[0]['desc']+
+            "\nAddress: "+numberedArrays[0]['street']+
+            ", "+numberedArrays[0]['locality']+
+            "\n Telephone: "+numberedArrays[0]['telephone']
+            +"\n Email: "+numberedArrays[0]['email'],
+            image: { // image is optional
+                smallImageUrl: numberedArrays[0]['images'][0], // required
+                largeImageUrl: numberedArrays[0]['images'][0]
+            }
+        });
+    }
+    if(param==="Number Two"){
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        response.card({
+            type: "Standard",
+            title: "Informations about "+numberedArrays[1]['name'], // this is not required for type Simple or Standard
+            text: "Description: "+numberedArrays[1]['desc']+
+            "\nAddress: "+numberedArrays[1]['street']+
+            ", "+numberedArrays[1]['locality']+"\n Telephone: "+
+            numberedArrays[1]['telephone']+
+            "\n Email: "+numberedArrays[1]['email'],
+            image: { // image is optional
+                smallImageUrl: numberedArrays[1]['images'][0], // required
+                largeImageUrl: numberedArrays[1]['images'][0]
+            }
+        });
+    }
+    if(param==="Number Three"){
+        response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.");
+        response.card({
+            type: "Standard",
+            title: "Informations about "+numberedArrays[2]['name'], // this is not required for type Simple or Standard
+            text: "Description: "+numberedArrays[2]['desc']+
+            "\nAddress: "+numberedArrays[2]['street']+", "+
+            numberedArrays[2]['locality']+"\n Telephone: "+
+            numberedArrays[2]['telephone']+"\n Email: "+
+            numberedArrays[2]['email'],
+            image: { // image is optional
+                smallImageUrl: numberedArrays[2]['images'][0], // required
+                largeImageUrl: numberedArrays[2]['images'][0]
+            }
+        });
+    }
   }
   else response.say("You're now on vacation.");
 });
 module.exports = app;
+
