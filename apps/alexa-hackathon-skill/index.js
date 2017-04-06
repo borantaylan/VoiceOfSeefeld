@@ -173,14 +173,14 @@ app.intent('Booking', {
 
 app.intent('EventLocality', {
     "slots": {
-        "Locality": "AMAZON.LITERAL"
+        "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
         "What events are in {Seefeld|Locality}",
         "What events are in {Scharnitz|Locality}"
     ]
 }, function(request, response) {
-    var param = request.slot("Locality");
+    var param = request.slot("AddressLocality");
     var listOfEventJSONs = request.getSession().get("listOfEvents");
     var filteredEventJSONs = [];
     var listOfEvents = [];
