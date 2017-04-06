@@ -401,12 +401,12 @@ app.intent('EventPhoto', {
 app.intent("numberDialog",{
     "slots": {"inputNum": "AMAZON.LITERAL"},
     "utterances": [
-        "Send me the information about Number {First|inputNum}",
-        "Send me the information about Number {Second|inputNum}",
-        "Send me the information about Number {Third|inputNum}",
-        "Number {First|inputNum}",
-        "Number {Second|inputNum}",
-        "Number {Third|inputNum}",
+        "Send me the information about the {first|inputNum} one",
+        "Send me the information about the {second|inputNum} one",
+        "Send me the information about the {third|inputNum} one",
+        "{First|inputNum} one",
+        "{Second|inputNum} one",
+        "{Third|inputNum} one",
         "{none|inputNum}",
         "{none of them|inputNum}"
     ]
