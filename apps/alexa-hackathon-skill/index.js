@@ -156,21 +156,6 @@ app.intent('HotelAddress', {
     response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]).reprompt().shouldEndSession(false);
 });
 
-app.intent('Booking', {
-    "slots": {},
-    "utterances": [
-        "Book a room for me",
-        "Can you book a room for me",
-        "Can you do a reservation for me"
-    ]
-}, function(request, response) {
-    response.say("Sorry, i can not do that, but I will send you the number.").shouldEndSession(false);
-    response.card({
-        type: "Simple",
-        content: "Telephone number of the hotel: +436504753001"
-    }).shouldEndSession(false);
-});
-
 app.intent('EventLocality', {
     "slots": {
         "AddressLocality": "AMAZON.LITERAL"
