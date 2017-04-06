@@ -8,8 +8,6 @@ var cheerio = require('cheerio');
 var moment = require('moment');
 var parser = require("./parser.js");
 
-var listOfHotelJSONs;
-
 app.launch(function(request, response) {
 
     //var listOfHotelJSONs = parser.parseFile("LodgingBusiness");
@@ -36,7 +34,7 @@ app.intent('Locality', {
         "Where can I stay in {Leutasch|AddressLocality}"
     ]
 }, function(request, response) {
-    listOfHotelJSONs = [{
+    var listOfHotelJSONs = [{
       "locality" : "Seefeld",
       "name" : "lol"
     },{
@@ -64,8 +62,8 @@ app.intent('Locality', {
         numberedArrays.push(filteredHotelJSONs[i]);
         result = result + "<p>Number " + (i + 1) + ": " + listOfHotels[i] + "</p>, ";
     }
-    request.getSession().set("numberedArrays", numberedArrays);
-    request.getSession().set("state", "hotel");
+    //request.getSession().set("numberedArrays", numberedArrays);
+    //request.getSession().set("state", "hotel");
     response.say(result.substring(0, result.length - 2));
 });
 module.exports = app;
