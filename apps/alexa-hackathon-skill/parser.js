@@ -39,7 +39,7 @@ function startParsing(filename) {
 
 function parseAcomodation(file) {
 
-    var name = file.name
+    var name = file.name.toLowerCase();
     var urls = file.url
     var desc = file.description
     var completeDesc = ""
@@ -81,7 +81,7 @@ function parseAcomodation(file) {
 }
 
 function parseInfra(file) {
-    var name = file.name
+    var name = file.name.toLowerCase();
     var urls = file.url
     var desc = file.description
 
@@ -111,7 +111,7 @@ function parseInfra(file) {
 
 function parseEvent(file) {
 
-    var name = file.name
+    var name = file.name.toLowerCase();
     var urls = file.url
     var desc = file.description
 
