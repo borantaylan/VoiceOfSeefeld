@@ -519,7 +519,7 @@ app.intent('Salut', {
 app.intent('AnswerYes', {
     "slots": {},
     "utterances": [
-        "Yes, please",
+        "Yes please",
         "Yes"
     ]
 }, function(request, response) {
