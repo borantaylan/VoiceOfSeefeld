@@ -36,9 +36,9 @@ app.intent('Locality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "Where can I stay in {seefeld|AddressLocality}",
-        "Where can I stay in {mosern|AddressLocality}",
-        "Where can I stay in {leutasch|AddressLocality}"
+        "Where can I stay in {Seefeld|AddressLocality}",
+        "Where can I stay in {Mosern|AddressLocality}",
+        "Where can I stay in {Leutasch|AddressLocality}"
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
@@ -64,7 +64,7 @@ app.intent('Locality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "hotel");
-    response.say(result.substring(0, result.length - 2));
+    response.say(result.substring(0, result.length - 2)).reprompt();
 });
 
 app.intent('Information', {
@@ -126,7 +126,7 @@ app.intent('Availability', {
             listOfHotels.push(hotel['offerNames'].length);
         }
     });
-    response.say("There are " + listOfHotels[0] + " rooms available.");
+    response.say("There are " + listOfHotels[0] + " rooms available.").reprompt();
 });
 
 app.intent('HotelAddress', {
@@ -154,7 +154,7 @@ app.intent('HotelAddress', {
             listOfHotels.push(hotel['locality']);
         }
     });
-    response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]);
+    response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]).reprompt();
 });
 
 app.intent('Booking', {
@@ -202,7 +202,7 @@ app.intent('EventLocality', {
     }
     request.getSession().set("numberedArrays", numberedArrays);
     request.getSession().set("state", "event");
-    response.say(result.substring(0, result.length - 2));
+    response.say(result.substring(0, result.length - 2)).reprompt();
 });
 
 app.intent('EventInformation', {
@@ -237,7 +237,7 @@ app.intent('EventInformation', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say("I will send you the information about " + param + " on your phone.");
+        response.say("I will send you the information about " + param + " on your phone.").reprompt();
         response.card({
             type: "Standard",
             title: "Informations about "+param, // this is not required for type Simple or Standard
@@ -248,7 +248,7 @@ app.intent('EventInformation', {
             }
         });
     }else{
-        response.say("Unfortunately, there are no details for this event.")
+        response.say("Unfortunately, there are no details for this event.").reprompt()
     }
 });
 
@@ -276,9 +276,9 @@ app.intent('StartEvent', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " starts " + listOfEvent[0]);
+        response.say(param + " starts " + listOfEvent[0]).reprompt();
     }else{
-        response.say("Unfortunately, there is no start date available for this event.");
+        response.say("Unfortunately, there is no start date available for this event.").reprompt();
     }
 });
 
@@ -306,9 +306,9 @@ app.intent('EndEvent', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " ends " + listOfEvent[0]);
+        response.say(param + " ends " + listOfEvent[0]).reprompt();
     }else{
-        response.say("Unfortunately, there is no end date available for this event.");
+        response.say("Unfortunately, there is no end date available for this event.").reprompt();
     }
 });
 
@@ -341,9 +341,9 @@ app.intent('EventLocation', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say(param + " is located in " + listOfEvent[1] + " in " + listOfEvent[0]);
+        response.say(param + " is located in " + listOfEvent[1] + " in " + listOfEvent[0]).reprompt();
     }else{
-        response.say("Unfortunately, there is location data available for this event.");
+        response.say("Unfortunately, there is location data available for this event.").reprompt();
     }
 });
 
@@ -367,13 +367,13 @@ app.intent('EventContact', {
         }
     });
     if(listOfEvent.length > 0){
-        response.say("I will send you the telephone number on your phone");
+        response.say("I will send you the telephone number on your phone").reprompt();
             response.card({
         type: "Simple",
         content: "Telephone number of the hotel: "+listOfEvent[0]
     });
     }else{
-        response.say("Unfortunately, there is telephone number available for this event.");
+        response.say("Unfortunately, there is telephone number available for this event.").reprompt();
     }
 });
 
@@ -398,7 +398,7 @@ app.intent('EventPhoto', {
     });
     if(listOfEvent.length > 0){
         if(listOfEvent[0]){
-        response.say("I will send you the photos on your phone");
+        response.say("I will send you the photos on your phone").reprompt();
         response.card({
             type: "Standard",
             title: "Photos from "+param, // this is not required for type Simple or Standard
@@ -410,7 +410,7 @@ app.intent('EventPhoto', {
         });
         }
     }else{
-        response.say("Unfortunately, there are no photos available for this event.");
+        response.say("Unfortunately, there are no photos available for this event.").reprompt();
     }
 });
 
@@ -426,7 +426,7 @@ app.intent("numberDialog",{
   var numberedArrays = request.getSession().get("numberedArrays");
   if(numberedArrays.length>0){
     if(param==="Number One"){
-        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt();
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[0]['startDate']+ "\n It ends at "+numberedArrays[0]['endDate']
@@ -446,7 +446,7 @@ app.intent("numberDialog",{
         });
     }
     if(param==="Number Two"){
-        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt();
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[1]['startDate']+ "\n It ends at "+numberedArrays[1]['endDate']
@@ -466,7 +466,7 @@ app.intent("numberDialog",{
         });
     }
     if(param==="Number Three"){
-        response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.");
+        response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.").reprompt();
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[2]['startDate']+ "\n It ends at "+numberedArrays[2]['endDate']
         }
@@ -485,7 +485,7 @@ app.intent("numberDialog",{
         });
     }
   }
-  else response.say("You're now on vacation.");
+  else response.say("You're now on vacation.").reprompt();
 });
 
 app.intent('Salut', {
@@ -502,7 +502,7 @@ app.intent('Salut', {
     ]
 }, function(request, response) {
     var param = request.slot("Place");
-    response.say("<p>Oh Cool!</p> Should I send you some pictures for "+param+"?");
+    response.say("<p>Oh Cool!</p> Should I send you some pictures for "+param+"?").reprompt();
     request.getSession().set("decision",true);
     request.getSession().set("place",param);
 });
@@ -516,7 +516,7 @@ app.intent('AnswerYes', {
 }, function(request, response) {
     if(request.getSession().get("decision") === true){
         var param = request.getSession().get("place");
-        response.say("Ok i am sending a picture to your phone.");
+        response.say("Ok i am sending a picture to your phone.").reprompt();
         var links = {
                 "Seefeld":{
                     "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
@@ -553,7 +553,7 @@ app.intent('AnswerNo', {
     ]
 }, function(request, response) {
     if(request.getSession().get('decision')===true){
-        response.say("I am sending you anyway, if you want to take a look");
+        response.say("I am sending you anyway, if you want to take a look").reprompt();
         var param = request.getSession().get("place");
         var links = {
                 "Seefeld":{
