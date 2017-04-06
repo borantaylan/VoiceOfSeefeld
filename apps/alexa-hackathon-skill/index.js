@@ -600,7 +600,7 @@ app.intent('Gratitude', {
     ]
 }, function(request, response) {
     response.say("You're welcome!").reprompt("Take care, goodbye!").shouldEndSession(true);
-}
+});
 
 
 module.exports = app;
