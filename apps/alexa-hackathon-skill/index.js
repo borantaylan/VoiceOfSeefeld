@@ -426,11 +426,15 @@ app.intent("numberDialog",{
   if(numberedArrays.length>0){
     if(param==="Number One"){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        var additionalDesc = ""
+        if (request.getSession().get("state")==="event") {
+            additionalDesc = "\n It starts at " + numberedArrays[0]['startDate']+ "\n It ends at "+numberedArrays[0]['endDate']
+        }
         response.card({
             type: "Standard",
             title: "Informations about "+numberedArrays[0]['name'], // this is not required for type Simple or Standard
-            text: "Description: "+numberedArrays[0]['desc']+
-            "\nAddress: "+numberedArrays[0]['street']+
+            text: "Description: "+numberedArrays[0]['desc']+additionalDesc+
+            "\n Address: "+numberedArrays[0]['street']+
             ", "+numberedArrays[0]['locality']+
             "\n Telephone: "+numberedArrays[0]['telephone']
             +"\n Email: "+numberedArrays[0]['email'],
@@ -442,11 +446,15 @@ app.intent("numberDialog",{
     }
     if(param==="Number Two"){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.");
+        var additionalDesc = ""
+        if (request.getSession().get("state")==="event") {
+            additionalDesc = "\n It starts at " + numberedArrays[1]['startDate']+ "\n It ends at "+numberedArrays[1]['endDate']
+        }
         response.card({
             type: "Standard",
             title: "Informations about "+numberedArrays[1]['name'], // this is not required for type Simple or Standard
-            text: "Description: "+numberedArrays[1]['desc']+
-            "\nAddress: "+numberedArrays[1]['street']+
+            text: "Description: "+numberedArrays[1]['desc']+additionalDesc+
+            "\n Address: "+numberedArrays[1]['street']+
             ", "+numberedArrays[1]['locality']+"\n Telephone: "+
             numberedArrays[1]['telephone']+
             "\n Email: "+numberedArrays[1]['email'],
@@ -458,11 +466,14 @@ app.intent("numberDialog",{
     }
     if(param==="Number Three"){
         response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.");
+        if (request.getSession().get("state")==="event") {
+            additionalDesc = "\n It starts at " + numberedArrays[2]['startDate']+ "\n It ends at "+numberedArrays[2]['endDate']
+        }
         response.card({
             type: "Standard",
             title: "Informations about "+numberedArrays[2]['name'], // this is not required for type Simple or Standard
-            text: "Description: "+numberedArrays[2]['desc']+
-            "\nAddress: "+numberedArrays[2]['street']+", "+
+            text: "Description: "+numberedArrays[2]['desc']+additionalDesc+
+            "\n Address: "+numberedArrays[2]['street']+", "+
             numberedArrays[2]['locality']+"\n Telephone: "+
             numberedArrays[2]['telephone']+"\n Email: "+
             numberedArrays[2]['email'],
@@ -475,5 +486,100 @@ app.intent("numberDialog",{
   }
   else response.say("You're now on vacation.");
 });
+
+app.intent('Salut', {
+    "slots": {
+        "Place": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "I want to travel to {Seefeld|Place} soon",
+        "I want to travel to {Leutasch|Place} soon",
+        "I want to travel to {Scharnitz|Place} soon",
+        "Is {Seefeld|Place} a good place to visit",
+        "Is {Leutasch|Place} a good place to visit",
+        "Is {Scharnitz|Place} a good place to visit"
+    ]
+}, function(request, response) {
+    var param = request.slot("Place");
+    response.say("<p>Oh Cool!</p> Should I send you some pictures for "+param+"?");
+    request.getSession().set("decision",true);
+    request.getSession().set("place",param);
+});
+
+app.intent('AnswerYes', {
+    "slots": {},
+    "utterances": [
+        "Yes, please",
+        "Yes"
+    ]
+}, function(request, response) {
+    if(request.getSession().get("decision") === true){
+        var param = request.getSession().get("place");
+        response.say("Ok i am sending a picture to your phone.");
+        var links = {
+                "Seefeld":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/3861/thumb_preview_d1c682be-fd58-4cef-b53b-798b300c8479.jpg"
+                },
+                "Leutasch":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/1684/thumb_xlarge_3639f858-3d72-4654-98ef-556958d42e1e.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/1684/thumb_preview_3639f858-3d72-4654-98ef-556958d42e1e.jpg"
+                },
+                "Scharnitz":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/2858/thumb_xlarge_d82cf894-b1f1-461e-bf70-3e36d516082b.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/2858/thumb_preview_d82cf894-b1f1-461e-bf70-3e36d516082b.jpg"
+                }
+        }
+        response.card({
+            type: "Standard",
+            title: "Picture of "+param, // this is not required for type Simple or Standard
+            text: "More pictures on: https://views.austria.info/en/media?q="+param,
+            image: { // image is optional
+                smallImageUrl: links[param]['smallurl'], // required
+                largeImageUrl: links[param]['bigurl']
+            }
+        });
+        request.getSession().clear("decision");
+    }
+}
+);
+
+app.intent('AnswerNo', {
+    "slots": {},
+    "utterances": [
+        "No",
+        "No thanks"
+    ]
+}, function(request, response) {
+    if(request.getSession().get('decision')===true){
+        response.say("I am sending you anyway, if you want to take a look");
+        var param = request.getSession().get("place");
+        var links = {
+                "Seefeld":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/3861/thumb_xlarge_d1c682be-fd58-4cef-b53b-798b300c8479.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/3861/thumb_preview_d1c682be-fd58-4cef-b53b-798b300c8479.jpg"
+                },
+                "Leutasch":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/1684/thumb_xlarge_3639f858-3d72-4654-98ef-556958d42e1e.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/1684/thumb_preview_3639f858-3d72-4654-98ef-556958d42e1e.jpg"
+                },
+                "Scharnitz":{
+                    "smallurl" : "https://views.austria.info/uploads/image/file/2858/thumb_xlarge_d82cf894-b1f1-461e-bf70-3e36d516082b.jpg",
+                    "bigurl" : "https://views.austria.info/uploads/image/file/2858/thumb_preview_d82cf894-b1f1-461e-bf70-3e36d516082b.jpg"
+                }
+        }
+        response.card({
+            type: "Standard",
+            title: "Picture of "+param, // this is not required for type Simple or Standard
+            text: "More pictures on: https://views.austria.info/en/media?q="+param,
+            image: { // image is optional
+                smallImageUrl: links[param]['smallurl'], // required
+                largeImageUrl: links[param]['bigurl']
+            }
+        });
+        request.getSession().clear("decision");
+    }
+});
+
 module.exports = app;
 
