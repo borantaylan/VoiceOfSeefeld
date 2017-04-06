@@ -16,6 +16,10 @@ app.launch(function(request, response) {
     listOfHotelJSONs = parser.parseFile("LodgingBusiness");
     console.log(listOfHotelJSONs);
     request.getSession().set("listOfHotels", listOfHotelJSONs);
+    var listOfEventJSONs = [];
+    listOfEventJSONs = parser.parseFile("Event");
+    console.log(listOfEventJSONs);
+    request.getSession().set("listOfEvents", listOfEventJSONs);
     console.log(listOfHotelJSONs);
     response.say('Welcome to Voice of Seefeld!').reprompt('You have any requests?').shouldEndSession(false);
 
@@ -43,11 +47,10 @@ app.intent('Locality', {
     var listOfHotelJSONs = request.getSession().get("listOfHotels");
     var listOfHotels = [];
     listOfHotelJSONs.forEach(hotel => {
-        listOfHotels.push(hotel['name']);
+        if(hotel['locality']===param){
+            listOfHotels.push(hotel['name']);
+        }
     });
-
-
-
 
     //TODO use param to retrieve hotel lists
     var result = "There are " + listOfHotels.length + " hotels in " + param + " you can stay: ";
@@ -57,6 +60,7 @@ app.intent('Locality', {
     }
     response.say(result.substring(0, result.length - 2));
 });
+
 app.intent('Information', {
     "slots": {
         "Name": "AMAZON.LITERAL"
@@ -71,14 +75,26 @@ app.intent('Information', {
     ]
 }, function(request, response) {
     var param = request.slot("Name");
-    response.say("I will send you the information on your phone.");
+    var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    var listOfHotels = [];
+    listOfHotelJSONs.forEach(hotel => {
+        if(hotel['name']===param){
+            listOfHotels.push(hotel['desc']);
+            listOfHotels.push(hotel['street']);
+            listOfHotels.push(hotel['locality']);
+            listOfHotels.push(hotel['telephone']);
+            listOfHotels.push(hotel['email']);
+            listOfHotels.push(hotel['images']);
+        }
+    });
+    response.say("I will send you the information about "+param+" on your phone.");
     response.card({
         type: "Standard",
-        title: "Informations about Sporthotel Xander", // this is not required for type Simple or Standard
-        text: "Description: In the heart of Leutasch the family run **** Hotel Xander, the oldest inn in the valley, is tucked away next to the onion-domed village-church. 150 beds in 12 double-rooms and 55 apartments with lounge area, bath/shower/WC. Telephone, safe, radio, SAT-TV and kitchenette\n dog per day 11,00 €\ngarage 10,00 € per day\nsauna, swiming pool is free\njacuzzi + solarium 7,00 €\nlaundry service 8,00 €\nlocal tax excl. \nlocationplan: the Hotel is in front of the church at the district Kirchplatzl.\nCheck in 14.00  Check out 10.00\nAddress: Kirchplatzl 147 in Leutasch\nTelephone: +4352146581\nWebsite: http://www.xander-leutasch.at",
+        title: "Informations about "+param, // this is not required for type Simple or Standard
+        text: "Description: "+listOfHotels[0]+"\nAddress: "+listOfHotels[1]+", "+listOfHotels[2]+"\nTelephone: "+listOfHotels[3]+"\nEmail: "+listOfHotels[4],
         image: { // image is optional
-            smallImageUrl: "https://resc.deskline.net/images/SEE/1/537c5c99-31af-45dc-943a-9a7fefe315ba/99/image.jpg", // required
-            largeImageUrl: "https://resc.deskline.net/images/SEE/1/6ceb14dd-8f3f-4949-9bb9-947c98bc8350/99/image.jpg"
+            smallImageUrl: listOfHotels[5][0], // required
+            largeImageUrl: listOfHotels[5][0]
         }
     });
 });
@@ -97,8 +113,14 @@ app.intent('Availability', {
     ]
 }, function(request, response) {
     var param = request.slot("Name");
-    var listOfRooms = ["Room 1", "Room 2", "Room 3"];
-    response.say("There are " + listOfRooms.length + " rooms available.");
+    var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    var listOfHotels = [];
+    listOfHotelJSONs.forEach(hotel => {
+        if(hotel['name']===param){
+            listOfHotels.push(hotel['offerNames'].length);
+        }
+    });
+    response.say("There are " + listOfHotels[0] + " rooms available.");
 });
 
 app.intent('HotelAddress', {
@@ -118,8 +140,15 @@ app.intent('HotelAddress', {
     ]
 }, function(request, response) {
     var param = request.slot("Name");
-    var address = "Seefeld Street 1";
-    response.say(param + " is located in " + address);
+    var listOfHotelJSONs = request.getSession().get("listOfHotels");
+    var listOfHotels = [];
+    listOfHotelJSONs.forEach(hotel => {
+        if(hotel['name']===param){
+            listOfHotels.push(hotel['street']);
+            listOfHotels.push(hotel['locality']);
+        }
+    });
+    response.say(param + " is located in " + listOfHotels[0] + ", "+listOfHotels[1]);
 });
 
 app.intent('Booking', {
@@ -137,5 +166,241 @@ app.intent('Booking', {
     });
 });
 
+app.intent('EventLocality', {
+    "slots": {
+        "Locality": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "What events are in {Seefeld|Locality}",
+        "What events are in {Scharnitz|Locality}"
+    ]
+}, function(request, response) {
+    var param = request.slot("Locality");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvents = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['locality']===param){
+            listOfEvents.push(event['name']);
+        }
+    });
+
+    //TODO use param to retrieve hotel lists
+    var result = "There are " + listOfEvents.length + " events in " + param + ": ";
+
+    for (var i = 0; i < listOfEvents.length; i++) {
+        result = result + "<p>Number " + (i + 1) + ": " + listOfEvents[i] + "</p>, ";
+    }
+    response.say(result.substring(0, result.length - 2));
+
+});
+
+app.intent('EventInformation', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "Send me the information about {Piano music (live)|Name}",
+        "Send me the information about {Village Festival of Seefeld´s associations|Name}",
+        "Send me the information about {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Send me the information about {Concert of French choir Le Diairi|Name}",
+        "Can you send me information about {Piano music (live)|Name}",
+        "Can you send me information about {Village Festival of Seefeld´s associations|Name}",
+        "Can you send me information about {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Can you send me information about {Concert of French choir Le Diairi|Name}"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['desc']);
+            listOfEvent.push(event['startDate']);
+            listOfEvent.push(event['endDate']);
+            listOfEvent.push(event['street']);
+            listOfEvent.push(event['locality']);
+            listOfEvent.push(event['telephone']);
+            listOfEvent.push(event['email']);
+            listOfEvent.push(event['addressUrl']);
+            listOfEvent.push(event['images']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        response.say("I will send you the information about " + param + " on your phone.");
+        response.card({
+            type: "Standard",
+            title: "Informations about "+param, // this is not required for type Simple or Standard
+            text: "Description: "+listOfEvent[0]+"\nStart: "+listOfEvent[1]+"\n Ende: "+listOfEvent[2]+"\nAddress: "+listOfEvent[3]+" "+listOfEvent[4]+"\n Telephone: "+listOfEvent[5]+"\n Email: "+listOfEvent[6]+"\n Website: "+listOfEvent[7],
+            image: { // image is optional
+                smallImageUrl: listOfEvent[8][0], // required
+                largeImageUrl: listOfEvent[8][0]
+            }
+        });
+    }else{
+        response.say("Unfortunately, there are no details for this event.")
+    }
+});
+
+app.intent('StartEvent', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "When is {Piano music (live)|Name}",
+        "When is {Village Festival of Seefeld´s associations|Name}",
+        "When is {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "When is {Concert of French choir \"Le Diairi\"|Name}",
+        "When does {Piano music (live)|Name} start",
+        "When does {Village Festival of Seefeld´s associations|Name} start",
+        "When does {Winter Activities - Enchanting Snowshoe hike|Name} start",
+        "When does {Concert of French choir \"Le Diairi\"|Name} start"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['startDate']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        response.say(param + " starts " + listOfEvent[0]);
+    }else{
+        response.say("Unfortunately, there is no start date available for this event.")
+    }
+});
+
+app.intent('EndEvent', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "When is {Piano music (live)|Name} finished",
+        "When is {Village Festival of Seefeld´s associations|Name} finished",
+        "When is {Winter Activities - Enchanting Snowshoe hike|Name} finished",
+        "When is {Concert of French choir \"Le Diairi\"|Name} finished",
+        "When does {Piano music (live)|Name} end",
+        "When does {Village Festival of Seefeld´s associations|Name} end",
+        "When does {Winter Activities - Enchanting Snowshoe hike|Name} end",
+        "When does {Concert of French choir \"Le Diairi\"|Name} end"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['endDate']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        response.say(param + " ends " + listOfEvent[0]);
+    }else{
+        response.say("Unfortunately, there is no end date available for this event.")
+    }
+});
+
+app.intent('EventLocation', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "Where is {Piano music (live)|Name} located",
+        "Where is {Village Festival of Seefeld´s associations|Name} located",
+        "Where is {Winter Activities - Enchanting Snowshoe hike|Name} located",
+        "Where is {Concert of French choir \"Le Diairi\"|Name} located",
+        "Where is {Piano music (live)|Name}",
+        "Where is {Village Festival of Seefeld´s associations|Name}",
+        "Where is {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Where is {Concert of French choir \"Le Diairi\"|Name}",
+        "What is the address of {Piano music (live)|Name}",
+        "What is the address of {Village Festival of Seefeld´s associations|Name}",
+        "What is the address of {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "What is the address of {Concert of French choir \"Le Diairi\"|Name}"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['street']);
+            listOfEvent.push(event['locality']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        response.say(param + " is located in " + listOfEvent[1] + " in " + listOfEvent[0]);
+    }else{
+        response.say("Unfortunately, there is location data available for this event.")
+    }
+});
+
+app.intent('EventContact', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "Tell me the contact of {Piano music (live)|Name}",
+        "Tell me the contact of {Village Festival of Seefeld´s associations|Name}",
+        "Tell me the contact of {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Tell me the contact of {Concert of French choir \"Le Diairi\"|Name}"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['telephone']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        response.say("I will send you the telephone number on your phone");
+            response.card({
+        type: "Simple",
+        content: "Telephone number of the hotel: "+listOfEvent[0]
+    });
+    }else{
+        response.say("Unfortunately, there is telephone number available for this event.")
+    }
+});
+
+app.intent('EventPhoto', {
+    "slots": {
+        "Name": "AMAZON.LITERAL"
+    },
+    "utterances": [
+        "Send me a image of {Piano music (live)|Name}",
+        "Send me a image of {Village Festival of Seefeld´s associations|Name}",
+        "Send me a image of {Winter Activities - Enchanting Snowshoe hike|Name}",
+        "Send me a image of {Concert of French choir \"Le Diairi\"|Name}"
+    ]
+}, function(request, response) {
+    var param = request.slot("Name");
+    var listOfEventJSONs = request.getSession().get("listOfEvents");
+    var listOfEvent = [];
+    listOfEventJSONs.forEach(event => {
+        if(event['name']===param){
+            listOfEvent.push(event['images']);
+        }
+    });
+    if(listOfEvent.length > 0){
+        if(listOfEvent[0]){
+        response.say("I will send you the photos on your phone");
+        response.card({
+            type: "Standard",
+            title: "Photos from "+param, // this is not required for type Simple or Standard
+            text: " ",
+            image: { // image is optional
+                smallImageUrl: listOfEvent[0][0], // required
+                largeImageUrl: listOfEvent[0][0]
+            }
+        });
+        }
+    }else{
+        response.say("Unfortunately, there are no photos available for this event.")
+    }
+});
 
 module.exports = app;
