@@ -399,10 +399,14 @@ app.intent('EventPhoto', {
 });
 
 app.intent("numberDialog",{
-    "slots": {"inputNum": "NUMBER"},
+    "slots": {"inputNum": "AMAZON.LITERAL"},
     "utterances": [
-        "Send me the information about Number {1-3|inputNum}",
-        "Number {1-3|inputNum}",
+        "Send me the information about Number {First|inputNum}",
+        "Send me the information about Number {Second|inputNum}",
+        "Send me the information about Number {Third|inputNum}",
+        "Number {First|inputNum}",
+        "Number {Second|inputNum}",
+        "Number {Third|inputNum}",
         "{none|inputNum}",
         "{none of them|inputNum}"
     ]
@@ -410,7 +414,7 @@ app.intent("numberDialog",{
   var param = request.slot("inputNum");
   var numberedArrays = request.getSession().get("numberedArrays");
   if(numberedArrays.length>0){
-    if(param==1||param=="1"||param=="one"||param=="One"){
+    if(param.toLowerCase()=="first"){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt().shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
@@ -430,7 +434,7 @@ app.intent("numberDialog",{
             }
         }).shouldEndSession(false);
     }
-    if(param==2||param=="2"||param=="two"||param=="Two"){
+    if(param.toLowerCase()=="second"){
         response.say("I am sending the information about "+numberedArrays[1]['name']+" on your phone.").reprompt('is there anything I can help?').shouldEndSession(false);
         var additionalDesc = ""
         if (request.getSession().get("state")==="event") {
@@ -450,7 +454,7 @@ app.intent("numberDialog",{
             }
         }).shouldEndSession(false);
     }
-    if(param==3||param=="3"||param=="three"||param=="Three"){
+    if(param.toLowerCase()=="third"){
         response.say("I am sending the information about "+numberedArrays[2]['name']+" on your phone.").reprompt().shouldEndSession(false);
         if (request.getSession().get("state")==="event") {
             additionalDesc = "\n It starts at " + numberedArrays[2]['startDate']+ "\n It ends at "+numberedArrays[2]['endDate']
