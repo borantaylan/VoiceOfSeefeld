@@ -161,8 +161,8 @@ app.intent('EventLocality', {
         "AddressLocality": "AMAZON.LITERAL"
     },
     "utterances": [
-        "What events take place in {seefeld|Locality}",
-        "What events take place in {Scharnitz|Locality}"
+        "What events take place in {seefeld|AddressLocality}",
+        "What events take place in {Scharnitz|AddressLocality}"
     ]
 }, function(request, response) {
     var param = request.slot("AddressLocality");
