@@ -1,2 +1,2 @@
 # VoiceOfSeefeld
-Hackathon group champions for sure
+Hackathon winner project is made with Informatik students from Innsbruck University.
